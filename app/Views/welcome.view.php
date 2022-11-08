@@ -8,6 +8,7 @@
 <body>
 
 <h1 class="welcome">Willkommen im 307-Framework!</h1>
+<button onclick="bestellen()">Bestellen</button>
 
 
 <p><?= e($hello) ?></p>
