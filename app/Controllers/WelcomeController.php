@@ -8,5 +8,9 @@ class WelcomeController
 		
 		require 'app/Views/welcome.view.php';
 	}
+
+	public function bestellen(){
+		require 'app/Views/bestellen.view.php';
+	}
 }
 
