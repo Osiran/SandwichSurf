@@ -1,5 +1,18 @@
+//div{border: 1px solid black;}
+p{
+    font-family: sans-serif;
+    font-size: 1.2em;
+}
 .container{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 100%;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
     .header{
+        grid-area: header;
         border: #41f010;
         h1{
             text-align: center;
@@ -9,5 +22,23 @@
             padding: 50px 0;
             background-color: #2e6ff1;
         }
+    }
+    .footer{
+        p{
+            font-size: 1em;
+        }
+        width: 100%;
+        text-align: center;
+        grid-area: footer;
+        display: grid;
+        grid-template-columns: repeat(3, 33.33%);
+        grid-template-areas: 'addresse  open  createdBy';
+
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        .addresse{grid-area: addresse;}
+        .open{grid-area: open;}
+        .createdBy{grid-area: createdBy;}
     }
 }
