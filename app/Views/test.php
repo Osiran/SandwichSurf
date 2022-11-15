@@ -17,23 +17,48 @@
                 <p>Das ist ein Text</p>
             </div>
             <div class="js">
-                <form action="/action_page.php" id="bread">
+                <form action="" id="bread">
                     <p>Choose your bread:</p>
-                      <input type="radio" id="html" name="fav_language" value="HTML">
-                      <label for="html">HTML</label><br>
-                      <input type="radio" id="css" name="fav_language" value="CSS">
-                      <label for="css">CSS</label><br>
-                      <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-                      <label for="javascript">JavaScript</label>
+                      <input type="radio" class="bread" name="fav_language" value="Ciabatta">
+                      <label for="html">Ciabatta</label><br>
+                      <input type="radio" class="bread" name="fav_language" value="Glutenfrei">
+                      <label for="css">Glutenfrei</label><br>
+                      <input type="radio" class="bread" name="fav_language" value="Vollkorn">
+                      <label for="javascript">Vollkorn</label>
+                        <input type="radio" class="bread" name="fav_language" value="Weissbrot">
+                      <label for="javascript">Weissbrot</label>
                     <input type="submit" value="Submit">
                 </form>
-                <form action="" id="sauce"></form>
-                <form action="" id="meat"></form>
-                <form action="" id="vegetables"></form>
-                <form action="" id=""></form>
+                <form action="" id="sauce">
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                      <label for="javascript">Chicken</label><input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                      <label for="javascript">Chicken</label>
+                </form>
+                <form action="" id="meat">
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                      <label for="javascript">Chicken</label>
+                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                      <label for="javascript">Roast-Beef</label>
+                </form>
+                <form action="" id="vegetables">
+                <input type="radio" id="javascript" name="1" value="JavaScript">
+                      <label for="javascript">Blue</label>
+                    <input type="radio" id="javascript" name="2" value="JavaScript">
+                      <label for="javascript">Chicken</label>
+                    <input type="radio" id="javascript" name="3" value="JavaScript">
+                      <label for="javascript">Beef</label>
+                </form>
+                <form action="" id="cheese">
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                      <label for="javascript">Chicken</label>
+                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                      <label for="javascript">Chicken</label>
+                </form>
             </div>
         </div>
         <div class="footer"><?php include 'app/Controllers/inc/footer.inc.php'; ?></div>
+        <script src="public/js/app.js"></script>
+
     </div>
 
 </body>
