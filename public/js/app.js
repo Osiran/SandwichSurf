@@ -2,43 +2,41 @@ function bestellen(){
     window.location ="bestellen";
 }
 
-
-
-console.log("passt");
+console.log("JS läuft");
 
 let bread = "";
 let sauce ="";
 let meat="";
 let vegetables= [];
 let cheese="";
-let hideCounter
+let hideCounter = 1;
 
-ChangeHiddenElement();
-
-document.getElementById("bread").addEventListener("submit", function(){
-    var checkedValue = document.querySelector('.bread:checked').value;
-    console.log(checkedValue);
-    ChangeHiddenElement();
-})
-
-function ChangeHiddenElement(){
-   
-    hideElement();
- hideCounter++;
+for(let i = 1; i <= 5; i++){
+    if(i == 1){
+        document.getElementById("slide" + i).style.display="block";
+    }else {
+        document.getElementById("slide" + i).style.display="none";
+    }
 }
 
-function hideElement(){
-    document.getElementById("bread").hidden = true;
-    document.getElementById("sauce").hidden = true;
-    document.getElementById("meat").hidden = true;
-    document.getElementById("vegetables").hidden = true;
+function goNext(index){
+    document.getElementById("slide" + index).style.display="none";
+    document.getElementById("slide" + (index + 1)).style.display="block";
+}
 
-    switch (hideCounter) {
-        case 0:
-            document.getElementById("bread").hidden = false;
-          break;
-        case 1:
-            document.getElementById("sauce").hidden = false;
-            
-    }
-    }
+function goBack(index){
+    document.getElementById("slide" + index).style.display="none";
+    document.getElementById("slide" + (index - 1)).style.display="block";
+}
+
+// document.getElementById("btn" + hideCounter).addEventListener("click", function(){
+//     console.log("it works!");
+
+//     // var checkedValue = document.querySelector('.bread:checked').value;
+//     // console.log(checkedValue);
+
+//     hideCounter++;
+//     console.log(hideCounter);
+
+//     ChangeHiddenElement();
+// })
