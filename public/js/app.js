@@ -13,11 +13,12 @@ let vegetables= [];
 let cheese="";
 let hideCounter
 
-
+ChangeHiddenElement();
 
 document.getElementById("bread").addEventListener("submit", function(){
     var checkedValue = document.querySelector('.bread:checked').value;
     console.log(checkedValue);
+    ChangeHiddenElement();
 })
 
 function ChangeHiddenElement(){
