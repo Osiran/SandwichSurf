@@ -7,18 +7,19 @@ class Cheese {
     private $db;
 
     // constructor
-    function __construct($id, $db) {
+    function __construct($id) {
         $this->pk_cheese = $id;
-        $this->db = $db;
+        $this->db = db();
         $this->setData();
     }
 
     // inserts a dataset and returns object of this class
-    static function create($db, $label, $img) {
+    static function create($label, $img) {
+        $db = db();
         $statement = $db->prepare('INSERT INTO cheese (label, img) VALUES (:label, :img)');
         $statement->bindParam(':label', $label);
         $statement->bindParam(':img', $img);
-        if ($statement->execute()) return new Cheese($db->lastInsertId(), $db);
+        if ($statement->execute()) return new Cheese($db->lastInsertId());
         return null;
     }
 
@@ -38,6 +39,7 @@ class Cheese {
         return $this->label;
     }
 
+    // returns the image variable
     function getImg() {
         return $this->img;
     }
