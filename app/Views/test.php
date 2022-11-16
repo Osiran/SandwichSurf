@@ -61,29 +61,39 @@
                 <!-- Sauce -->
                 <div class="form4" id="slide4">
                     <p>Choose your sauce:</p>
-                    <input type="radio" class="sauce" name="1" value="JavaScript">
-                    <label for="javascript">Blue</label><br>
-                    <input type="radio" class="sauce" name="2" value="JavaScript">
-                    <label for="javascript">Chicken</label><br>
-                    <input type="radio" class="sauce" name="3" value="JavaScript">
-                    <label for="javascript">Beef</label><br><br>
+                    <input type="radio" class="sauce" name="fav_language" value="Cocktail">
+                    <label for="javascript">Cocktail</label><br>
+                    <input type="radio" class="sauce" name="fav_language" value="Ketchup">
+                    <label for="javascript">Ketchup</label><br>
+                    <input type="radio" class="sauce" name="fav_language" value="Mayonnaise">
+                    <label for="javascript">Mayonnaise</label><br>
+                    <input type="radio" class="sauce" name="fav_language" value="Senf">
+                    <label for="javascript">Senf</label><br><br>
                     <button onclick="goBack(4)"><- Zurück</button>
                     <button onclick="goNext(4)">Weiter -></button>
                 </div>
                 <!-- Vegetables -->
                 <div class="form5" id="slide5">
                     <p>Choose your vegetables:</p>
-                    <input type="radio" class="vegetables" name="fav_language" value="Cocktail">
+                    <input type="radio" class="vegetables" name="fav_language" value="Ananas">
                     <label for="javascript">Cocktail</label><br>
-                    <input type="radio" class="vegetables" name="fav_language" value="Ketchup">
+                    <input type="radio" class="vegetables" name="fav_language" value="Banane">
                     <label for="javascript">Ketchup</label><br>
-                    <input type="radio" class="vegetables" name="fav_language" value="Mayonnaise">
+                    <input type="radio" class="vegetables" name="fav_language" value="Champignon">
                     <label for="javascript">Mayonnaise</label><br>
-                    <input type="radio" class="vegetables" name="fav_language" value="Senf">
+                    <input type="radio" class="vegetables" name="fav_language" value="Gurke">
                     <label for="javascript">Senf</label><br><br>
                     <button onclick="goBack(5)"><- Zurück</button>
+                    <button onclick="goNext(5)">Fertig -></button>
+                </div>
+                <!-- See order -->
+                <div class="form6" id="slide6">
+                    <p>What you have picked:</p>
+                    <p id="showOrder"></p>
+                    <button onclick="goBack(6)"><- Zurück</button>
                     <button>Bestellen -></button>
                 </div>
+            </div>
             </div>
         </div>
         <div class="footer"><?php include 'app/Controllers/inc/footer.inc.php'; ?></div>
