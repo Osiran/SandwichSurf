@@ -2,8 +2,9 @@
 require 'core/bootstrap.php';
 
 $routes = [
-	'home' => 'WelcomeController@index',
-	'bestellen' => 'WelcomeController@bestellen',
+	'home' => 'Controller@index',
+	'bestellen' => 'Controller@bestellen',
+	'test' => 'Controller@test',
 ];
 
 $router = new Router($routes);
