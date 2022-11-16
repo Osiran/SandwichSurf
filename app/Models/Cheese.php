@@ -34,6 +34,11 @@ class Cheese {
         }
     }
 
+    // return pk
+    function getPK() {
+        return $this->pk_cheese;
+    }
+
     // returns the label of the cheese
     function getLabel() {
         return $this->label;

@@ -1,32 +1,32 @@
 <?php
 
-class Meat {
-    private $pk_meat;
+class Bread {
+    private $pk_bread;
     private $db;
     private $label;
     private $img;
 
     // constructor
-    function __construct($pk_meat) {
+    function __construct($id) {
         $this->db = db();
-        $this->pk_meat = $pk_meat;
+        $this->pk_bread = $id;
         $this->setData();
     }
 
-    // inserts a dataset into meat and returns a meat object
+    // inserts a dataset and returns an instance of Bread
     static function create($label, $img) {
         $db = db();
-        $statement = $db->prepare('INSERT INTO meat (label, img) VALUES (:label, :img)');
+        $statement = $db->prepare('INSERT INTO bread (label, img) VALUES (:label, :img)');
         $statement->bindParam(':label', $label);
         $statement->bindParam(':img', $img);
-        if ($statement->execute()) return new Meat($db->lastInsertId());
+        if ($statement->execute()) return new Bread($db->lastInsertId());
         return null;
     }
 
-    // sets the member variables with data from the db
+    // gets data from the database and sets the variables
     function setData() {
-        $statement = $this->db->prepare('SELECT label, img FROM meat WHERE pk_meat = :id LIMIT 1');
-        $statement->bindParam(':id', $this->pk_meat);
+        $statement = $this->db->prepare('SELECT label, img FROM bread WHERE pk_bread = :id LIMIT 1');
+        $statement->bindParam(':id', $this->pk_bread);
         $statement->execute();
 
         if ($statement->rowCount() > 0) {
@@ -39,7 +39,7 @@ class Meat {
     // get methods
 
     function getPK() {
-        return $this->pk_meat;
+        return $this->pk_bread;
     }
 
     function getLabel() {
