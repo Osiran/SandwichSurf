@@ -27,7 +27,7 @@
                       <label for="javascript">Vollkorn</label>
                         <input type="radio" class="bread" name="fav_language" value="Weissbrot">
                       <label for="javascript">Weissbrot</label>
-                    <input type="submit" value="Submit">
+                    
                 </form>
                 <form action="" id="sauce">
                 <input type="radio" id="javascript" name="fav_language" value="JavaScript">
@@ -56,6 +56,7 @@
                 </form>
             </div>
         </div>
+        <input type="submit" value="Submit">
         <div class="footer"><?php include 'app/Controllers/inc/footer.inc.php'; ?></div>
         <script src="public/js/app.js"></script>
 
