@@ -13,6 +13,19 @@ class Cheese {
         $this->setData();
     }
 
+    static function getAll() {
+        $db = db();
+        $statement = $db->prepare('SELECT pk_cheese FROM cheese ORDER BY label ASC');
+        $statement->execute();
+
+        $cheeseList = [];
+        foreach ($statement->fetchAll() as $cheese) {
+            array_push($cheeseList, new Cheese($cheese['pk_cheese']));
+        }
+
+        return $cheeseList;
+    }
+
     // inserts a dataset and returns object of this class
     static function create($label, $img) {
         $db = db();

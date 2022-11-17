@@ -13,6 +13,19 @@ class Meat {
         $this->setData();
     }
 
+    static function getAll() {
+        $db = db();
+        $statement = $db->prepare('SELECT pk_meat FROM meat ORDER BY label ASC');
+        $statement->execute();
+
+        $meatList = [];
+        foreach ($statement->fetchAll() as $meat) {
+            array_push($meatList, new Meat($meat['pk_meat']));
+        }
+
+        return $meatList;
+    }
+
     // inserts a dataset into meat and returns a meat object
     static function create($label, $img) {
         $db = db();

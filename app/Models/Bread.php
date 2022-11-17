@@ -13,6 +13,19 @@ class Bread {
         $this->setData();
     }
 
+    static function getAll() {
+        $db = db();
+        $statement = $db->prepare('SELECT pk_bread FROM bread ORDER BY label ASC');
+        $statement->execute();
+
+        $breads = [];
+        foreach ($statement->fetchAll() as $bread) {
+            array_push($breads, new Bread($bread['pk_bread']));
+        }
+
+        return $breads;
+    }
+
     // inserts a dataset and returns an instance of Bread
     static function create($label, $img) {
         $db = db();

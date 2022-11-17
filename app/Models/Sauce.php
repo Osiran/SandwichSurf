@@ -13,6 +13,19 @@ class Sauce {
         $this->setData();
     }
 
+    static function getAll() {
+        $db = db();
+        $statement = $db->prepare('SELECT pk_sauce FROM sauce ORDER BY label ASC');
+        $statement->execute();
+
+        $sauces = [];
+        foreach ($statement->fetchAll() as $sauce) {
+            array_push($sauces, new Sauce($sauce['pk_sauce']));
+        }
+
+        return $sauces;
+    }
+
     // inserts a dataset and returns an instance of an object
     static function create($label, $img) {
         $db = db();

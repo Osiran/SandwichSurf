@@ -18,6 +18,19 @@ class Order {
         $this->setVegetables();
     }
 
+    // returns all orders as array of class objects
+    static function getAll() {
+        $db = db();
+        $statement = $db->prepare('SELECT pk_orders FROM orders ORDER BY timestamp DESC');
+        $statement->execute();
+
+        $orders = [];
+        foreach ($statement->fetchAll() as $order) {
+            array_push($orders, new Order($order['pk_orders']));
+        }
+        return $orders;
+    }
+
     // inserts a dataset into the database and returns instance of Order
     static function create($bread, $meat, $cheese, $sauce, $timestamp) {
         $db = db();
