@@ -13,6 +13,21 @@ class Vegetables {
         $this->setData();
     }
 
+    // returns all vegetables from the database as class objects
+    static function getAll() {
+        $db = db();
+        $statement = $db->prepare('SELECT pk_vegetables FROM vegetables ORDER BY label ASC');
+        $statement->execute();
+
+        $vegetables = [];
+
+        foreach ($statement->getAll() as $v) {
+            array_push($vegetables, new Vegetables($v['pk_vegetables']));
+        }
+
+        return $vegetables;
+    }
+
     // inserts a dataset and returns an instance of an object
     static function create($label, $img) {
         $db = db();
