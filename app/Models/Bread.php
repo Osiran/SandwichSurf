@@ -13,6 +13,7 @@ class Bread {
         $this->setData();
     }
 
+    // gets all the bread from the database and returns array of class objects
     static function getAll() {
         $db = db();
         $statement = $db->prepare('SELECT pk_bread FROM bread ORDER BY label ASC');

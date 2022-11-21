@@ -13,6 +13,7 @@ class Sauce {
         $this->setData();
     }
 
+    // returns array of all sauces in the db
     static function getAll() {
         $db = db();
         $statement = $db->prepare('SELECT pk_sauce FROM sauce ORDER BY label ASC');
