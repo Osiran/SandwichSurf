@@ -1,4 +1,7 @@
 //div{border: 1px solid black;}
+body{
+    margin: 0;
+}
 p{
     font-family: sans-serif;
     font-size: 1.2em;
@@ -13,14 +16,28 @@ p{
     'footer';
     .header{
         grid-area: header;
-        border: #41f010;
+        border: 1px solid #41f010;
+        padding: 0;
+        .border1{
+            border: 1px solid #2e6ff1;
+        }
+        .border2{
+            border: 1px solid #41f010;
+        }
         h1{
             text-align: center;
             font-size: 4em;
             font-family: sans-serif;
             color: #41f010;
-            padding: 50px 0;
             background-color: #2e6ff1;
+        }
+    }
+    .main{
+        .text{
+            text-align: center;
+        }
+        .buttons{
+            text-align: center;
         }
     }
     .footer{

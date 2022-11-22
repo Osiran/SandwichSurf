@@ -2,8 +2,9 @@
 require 'core/bootstrap.php';
 
 $routes = [
+	'' => 'Controller@index',
 	'home' => 'Controller@index',
-	'bestellen' => 'Controller@bestellen',
+	'orders' => 'Controller@order',
 	'test' => 'Controller@test',
 ];
 

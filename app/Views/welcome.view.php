@@ -16,7 +16,9 @@
                 <p>Vielen Dank für Ihren Auftrag</p>
             </div>
             <div class="buttons">
-                <p>Weiter zur Bestellung</p>
+                <a href="orders">
+                    <button type="button">Weiter zur Bestellung</button>
+                </a>
             </div>
         </div>
         <div class="footer"><?php include 'app/Controllers/inc/footer.inc.php' ?></div>

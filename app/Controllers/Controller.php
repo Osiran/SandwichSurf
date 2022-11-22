@@ -7,8 +7,8 @@ class Controller
 		require 'app/Views/welcome.view.php';
 	}
 
-	public function bestellen(){
-		require 'app/Views/bestellen.view.php';
+	public function order(){
+		require 'app/Views/order.view.php';
 	}
 
 	public function test(){
