@@ -22,5 +22,12 @@ class Controller
 
 		require 'app/Views/test.php';
 	}
+
+	public function add_order(){
+		$pdo = connectDatabase();
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+		$Order = Order::create($_POST['bread'], $_POST['cheese'], $_POST['meat'], $_POST['sauce'], $_POST['vegetables']);
+	}
 }
 
