@@ -96,7 +96,7 @@
                 <div class="form6" id="slide6">
                     <p>What you have picked:</p>
 
-                    <form action="#" method="POST">
+                    <form action="add_order" method="POST">
                         <label for="bread">Bread:</label><br>
                         <input type="text" id="bread" name="bread"><br>
                         <label for="cheese">Cheese:</label><br>

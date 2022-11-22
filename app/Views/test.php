@@ -75,7 +75,7 @@
                         <- Zurück</button>
                             <button onclick="goNext(4)">Weiter -></button>
                 </div>
-                <!-- Vegetables -->
+                <!-- Vegetables (checkbox) -->
                 <div class="form5" id="slide5">
                     <p>Choose your vegetables:</p>
                     <input type="radio" class="vegetables" name="fav_language" value="Ananas">
@@ -105,12 +105,11 @@
                         <input type="text" id="sauce" name="sauce"><br>
                         <label for="vegetables">Vegetables:</label><br>
                         <input type="text" id="vegetables" name="vegetables"><br><br>
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Bestellen ->">
                     </form>
 
                     <button onclick="goBack(6)">
                         <- Zurück</button>
-                            <button>Bestellen -></button>
                 </div>
             </div>
         </div>
