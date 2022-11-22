@@ -6,6 +6,7 @@ $routes = [
 	'home' => 'Controller@index',
 	'orders' => 'Controller@order',
 	'orderNr' => 'Controller@orderNr',
+	'login' => 'Controller@login',
 	'test' => 'Controller@test',
 ];
 

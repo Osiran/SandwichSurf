@@ -19,6 +19,10 @@ class Controller
 		require 'app/Views/overview.view.php';
 	}
 
+	public function login(){
+		require 'app/Views/login.view.php';
+	}
+
 	public function test(){
 		// $pdo = connectDatabase();
         // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
