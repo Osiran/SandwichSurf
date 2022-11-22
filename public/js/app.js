@@ -49,13 +49,12 @@ function goNext(index){
             vegetables = document.querySelector('.vegetables:checked').value;
             console.log(vegetables);
 
-            /* Display order */
-            bestellung.innerHTML =
-            "Bread: " + bread + "<br>" +
-            "Cheese: " + cheese + "<br>" +
-            "Meat: " + meat + "<br>" +
-            "Sauce: " + sauce + "<br>" +
-            "Vegetables: " + vegetables + "<br>";
+            /* Display order in form */
+            document.getElementById("bread").value = bread;
+            document.getElementById("cheese").value = cheese;
+            document.getElementById("meat").value = meat;
+            document.getElementById("sauce").value = sauce;
+            document.getElementById("vegetables").value = vegetables;
             break;
         default:
             console.log("Bitte wählen Sie etwas gültiges aus!");
