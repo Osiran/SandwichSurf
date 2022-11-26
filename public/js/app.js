@@ -46,7 +46,7 @@ function goNext(index){
             console.log(sauce);
             break;
         case 5:
-            vegetables = document.querySelector('.vegetables:checked').value;
+            document.querySelectorAll('.vegetables:checked').forEach((element)=>{ vegetables.push(element.value)});
             console.log(vegetables);
 
             /* Display order in form */
