@@ -44,6 +44,18 @@ class Controller
 	}
 
 	public function ingredient(){
+		require 'app/Models/Bread.php';
+		require 'app/Models/Cheese.php';
+		require 'app/Models/Meat.php';
+		require 'app/Models/Sauce.php';
+		require 'app/Models/Vegetables.php';
+
+		$breadArray = Bread::getAll();
+		$cheeseArray = Bread::getAll();
+		$meatArray = Bread::getAll();
+		$sauceArray = Bread::getAll();
+		$vegetablesArray = Bread::getAll();
+
 		require 'app/Views/ingridients.view.php';
 	}
 
