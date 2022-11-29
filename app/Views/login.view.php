@@ -17,7 +17,21 @@
                 <p>Bitte loggen Sie sich hier ein:</p>
             </div>
             <div class="js">
-                <!-- Hier die HTML-Elemente für die JS-Datei einfügen -->
+                <form action="loginControl" method="POST">
+                    <table>
+                        <tr>
+                            <td><label for="name">Name:</label></td>
+                            <td><input type="text" name="name" id="name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="password">Passwort:</label></td>
+                            <td><input type="password" name="password" id="password"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit">Absenden</button></td>
+                        </tr>
+                    </table>
+                </form>
             </div>
         </div>
         <div class="footer">

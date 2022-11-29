@@ -11,4 +11,4 @@ values
 ('Appenzeller','public/img/icon.png'),
 ('Cheddar','public/img/icon.png'),
 ('Emmentaler','public/img/icon.png'),
-('Laktosefrei','public/img/icon.png');
+('Laktose-free','public/img/icon.png');
