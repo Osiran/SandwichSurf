@@ -33,12 +33,14 @@ class Controller
 		if ($errors == []) {
 			require 'app/Models/Staff.php';
 			$staff = new Staff();
-			if ($staff->login($_POST['pk_staffId'], $_POST['password'])) {
+			$staffId = $staff->login($_POST['pk_staffId'], $_POST['password']);
+			if ($staffId) {
 				// login succeeded -> go to overview if staff; go to ingredients if admin
+				if ($staffId == 1) header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . 'ingredient');
+				else header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . 'overview');
 			}
 		}
-
-		require 'app/Controllers/inc/loginControl.inc.php';
+		header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . 'login');
 	}
 
 	public function ingredient(){
