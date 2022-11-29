@@ -8,14 +8,14 @@ USE DATABASE `sandwichsurf`;
 INSERT INTO `vegetables`
 (`label`,`img`)
 values
-('Alles','public/img/icon.png'),
-('Ananas','public/img/icon.png'),
-('Banane','public/img/icon.png'),
-('Champignon','public/img/icon.png'),
-('Gurke','public/img/icon.png'),
+('Everything','public/img/icon.png'),
+('Pineapple','public/img/icon.png'),
+('Banana','public/img/icon.png'),
+('Mushrooms','public/img/icon.png'),
+('Cucumber','public/img/icon.png'),
 ('Jalapeños','public/img/icon.png'),
-('Mais','public/img/icon.png'),
+('Corn','public/img/icon.png'),
 ('Pepperoni','public/img/icon.png'),
-('Salat','public/img/icon.png'),
-('Tomate','public/img/icon.png'),
-('Zwiebel','public/img/icon.png');
+('Salad','public/img/icon.png'),
+('Tomatoes','public/img/icon.png'),
+('Onions','public/img/icon.png');
