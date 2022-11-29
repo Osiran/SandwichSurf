@@ -8,6 +8,12 @@ class Controller
 	}
 
 	public function order(){
+		require 'app/Models/Order.php';
+
+		$orders = Order::getAll();
+
+		
+
 		require 'app/Views/order.view.php';
 	}
 
