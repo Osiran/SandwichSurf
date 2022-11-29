@@ -21,7 +21,7 @@
             <div class="js">
                 <!-- Bread -->
                 <div class="form1" id="slide1">
-                    <p>Choose your bread:</p>
+                    <p>Wählen sie Ihr Brot:</p>
                     <input type="radio" class="bread" name="Ciabatta" value="Ciabatta">
                     <label for="Ciabatta">Ciabatta</label><br>
                     <input type="radio" class="bread" name="Gluten-free" value="Glutenfrei">
@@ -34,7 +34,7 @@
                 </div>
                 <!-- Cheese -->
                 <div class="form2" id="slide2">
-                    <p>Choose your cheese:</p>
+                    <p>Wählen sie Ihren Käse:</p>
                     <input type="radio" class="cheese" name="fav_language" value="Appenzeller">
                     <label for="javascript">Appenzeller</label><br>
                     <input type="radio" class="cheese" name="fav_language" value="Cheddar">
@@ -49,7 +49,7 @@
                 </div>
                 <!-- Meat -->
                 <div class="form3" id="slide3">
-                    <p>Choose your meat:</p>
+                    <p>Wählen sie Ihre Fleischsorte:</p>
                     <input type="radio" class="meat" name="Chicken" value="Chicken">
                     <label for="javascript">Chicken</label><br>
                     <input type="radio" class="meat" name="Roast-Beef value=" Roast-Beef">
@@ -64,7 +64,7 @@
                 </div>
                 <!-- Sauce -->
                 <div class="form4" id="slide4">
-                    <p>Choose your sauce:</p>
+                    <p>Wählen sie Ihre Sauce:</p>
                     <input type="radio" class="sauce" name="Cocktail" value="Cocktail">
                     <label for="javascript">Cocktail</label><br>
                     <input type="radio" class="sauce" name="Ketchup" value="Ketchup">
@@ -79,7 +79,7 @@
                 </div>
                 <!-- Vegetables -->
                 <div class="form5" id="slide5">
-                    <p>Choose your vegetables:</p>
+                    <p>Wählen sie Ihr Gemüse:</p>
                     <input type="radio" class="vegetables" name="Pineapple" value="Ananas">
                     <label for="javascript">Ananas</label><br>
                     <input type="radio" class="vegetables" name="Banana" value="Banane">
