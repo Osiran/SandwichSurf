@@ -80,13 +80,13 @@
                 <!-- Vegetables (checkbox) -->
                 <div class="form5" id="slide5">
                     <p>Wählen sie Ihr Brot:</p>
-                    <input type="checkbox" class="vegetables" name="fav_language" value="Ananas">
+                    <input type="checkbox" class="vegetables" name="Pineaplle" value="Ananas">
                     <label for="javascript">Ananas</label><br>
-                    <input type="checkbox" class="vegetables" name="fav_language" value="Banane">
+                    <input type="checkbox" class="vegetables" name="Banana" value="Banane">
                     <label for="javascript">Banane</label><br>
-                    <input type="checkbox" class="vegetables" name="fav_language" value="Champignon">
+                    <input type="checkbox" class="vegetables" name="Mushrooms" value="Champignon">
                     <label for="javascript">Champignon</label><br>
-                    <input type="checkbox" class="vegetables" name="fav_language" value="Gurke">
+                    <input type="checkbox" class="vegetables" name="Cucumber" value="Gurke">
                     <label for="javascript">Gurke</label><br><br>
                     <button onclick="goBack(5)">
                         <- Zurück</button>
@@ -110,7 +110,8 @@
                         <input type="submit" value="Bestellen ->">
                     </form>
 
-                    <button onclick="goBack(6)"><- Zurück</button>
+                    <button onclick="goBack(6)">
+                        <- Zurück</button>
                 </div>
             </div>
             <div class="footer">
