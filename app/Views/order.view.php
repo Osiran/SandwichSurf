@@ -21,27 +21,27 @@
             <div class="js">
                 <!-- Bread -->
                 <div class="form1" id="slide1">
-                    <p>Choose your bread:</p>
+                    <p>Wählen sie Ihr Brot:</p>
                     <input type="radio" class="bread" name="Ciabatta" value="Ciabatta">
                     <label for="Ciabatta">Ciabatta</label><br>
-                    <input type="radio" class="bread" name="Glutenfrei" value="Glutenfrei">
+                    <input type="radio" class="bread" name="Gluten-free" value="Glutenfrei">
                     <label for="css">Glutenfrei</label><br>
-                    <input type="radio" class="bread" name="Vollkorn" value="Vollkorn">
+                    <input type="radio" class="bread" name="Whole-Bread" value="Vollkorn">
                     <label for="javascript">Vollkorn</label><br>
-                    <input type="radio" class="bread" name="Weissbrot" value="Weissbrot">
+                    <input type="radio" class="bread" name="White Bread" value="Weissbrot">
                     <label for="javascript">Weissbrot</label><br><br>
                     <button onclick="goNext(1)">Weiter -></button>
                 </div>
                 <!-- Cheese -->
                 <div class="form2" id="slide2">
-                    <p>Choose your cheese:</p>
+                    <p>Wählen sie Ihren Käse:</p>
                     <input type="radio" class="cheese" name="fav_language" value="Appenzeller">
                     <label for="javascript">Appenzeller</label><br>
                     <input type="radio" class="cheese" name="fav_language" value="Cheddar">
                     <label for="javascript">Cheddar</label><br>
                     <input type="radio" class="cheese" name="fav_language" value="Emmentaler">
                     <label for="javascript">Emmentaler</label><br>
-                    <input type="radio" class="cheese" name="fav_language" value="Laktosefrei">
+                    <input type="radio" class="cheese" name="fav_language" value="Laktose-free">
                     <label for="javascript">Laktosefrei</label><br><br>
                     <button onclick="goBack(2)">
                         <- Zurück</button>
@@ -49,14 +49,14 @@
                 </div>
                 <!-- Meat -->
                 <div class="form3" id="slide3">
-                    <p>Choose your meat:</p>
-                    <input type="radio" class="meat" name="fav_language" value="Chicken">
+                    <p>Wählen sie Ihre Fleischsorte:</p>
+                    <input type="radio" class="meat" name="Chicken" value="Chicken">
                     <label for="javascript">Chicken</label><br>
-                    <input type="radio" class="meat" name="fav_language" value="Roast-Beef">
+                    <input type="radio" class="meat" name="Roast-Beef value=" Roast-Beef">
                     <label for="javascript">Roast-Beef</label><br>
-                    <input type="radio" class="meat" name="fav_language" value="Schinken">
+                    <input type="radio" class="meat" name="Ham" value="Schinken">
                     <label for="javascript">Schinken</label><br>
-                    <input type="radio" class="meat" name="fav_language" value="Tofu">
+                    <input type="radio" class="meat" name="Tofu" value="Tofu">
                     <label for="javascript">Tofu</label><br><br>
                     <button onclick="goBack(3)">
                         <- Zurück</button>
@@ -64,14 +64,14 @@
                 </div>
                 <!-- Sauce -->
                 <div class="form4" id="slide4">
-                    <p>Choose your sauce:</p>
-                    <input type="radio" class="sauce" name="fav_language" value="Cocktail">
+                    <p>Wählen sie Ihre Sauce:</p>
+                    <input type="radio" class="sauce" name="Cocktail" value="Cocktail">
                     <label for="javascript">Cocktail</label><br>
-                    <input type="radio" class="sauce" name="fav_language" value="Ketchup">
+                    <input type="radio" class="sauce" name="Ketchup" value="Ketchup">
                     <label for="javascript">Ketchup</label><br>
-                    <input type="radio" class="sauce" name="fav_language" value="Mayonnaise">
+                    <input type="radio" class="sauce" name="Mayonnaise" value="Mayonnaise">
                     <label for="javascript">Mayonnaise</label><br>
-                    <input type="radio" class="sauce" name="fav_language" value="Senf">
+                    <input type="radio" class="sauce" name="Mustard" value="Senf">
                     <label for="javascript">Senf</label><br><br>
                     <button onclick="goBack(4)">
                         <- Zurück</button>
@@ -79,14 +79,14 @@
                 </div>
                 <!-- Vegetables -->
                 <div class="form5" id="slide5">
-                    <p>Choose your vegetables:</p>
-                    <input type="radio" class="vegetables" name="fav_language" value="Ananas">
+                    <p>Wählen sie Ihr Gemüse:</p>
+                    <input type="radio" class="vegetables" name="Pineapple" value="Ananas">
                     <label for="javascript">Ananas</label><br>
-                    <input type="radio" class="vegetables" name="fav_language" value="Banane">
+                    <input type="radio" class="vegetables" name="Banana" value="Banane">
                     <label for="javascript">Banane</label><br>
-                    <input type="radio" class="vegetables" name="fav_language" value="Champignon">
+                    <input type="radio" class="vegetables" name="Mushrooms" value="Champignon">
                     <label for="javascript">Champignon</label><br>
-                    <input type="radio" class="vegetables" name="fav_language" value="Gurke">
+                    <input type="radio" class="vegetables" name="Cucumber" value="Gurke">
                     <label for="javascript">Gurke</label><br><br>
                     <button onclick="goBack(5)">
                         <- Zurück</button>
@@ -94,18 +94,18 @@
                 </div>
                 <!-- See order -->
                 <div class="form6" id="slide6">
-                    <p>What you have picked:</p>
+                    <p>Ihre Auswahl:</p>
 
                     <form action="add_order" method="POST">
-                        <label for="bread">Bread:</label><br>
+                        <label for="bread">Brod:</label><br>
                         <input type="text" id="bread" name="bread"><br>
-                        <label for="cheese">Cheese:</label><br>
+                        <label for="cheese">Käse:</label><br>
                         <input type="text" id="cheese" name="cheese"><br>
-                        <label for="meat">Meat:</label><br>
+                        <label for="meat">Fleisch:</label><br>
                         <input type="text" id="meat" name="meat"><br>
                         <label for="sauce">Sauce:</label><br>
                         <input type="text" id="sauce" name="sauce"><br>
-                        <label for="vegetables">Vegetables:</label><br>
+                        <label for="vegetables">Gemüse:</label><br>
                         <input type="text" id="vegetables" name="vegetables"><br><br>
                         <input type="submit" value="Submit">
                     </form>

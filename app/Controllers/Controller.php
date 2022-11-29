@@ -41,6 +41,10 @@ class Controller
 		require 'app/Controllers/inc/loginControl.inc.php';
 	}
 
+	public function ingredient(){
+		require 'app/Views/ingridients.view.php';
+	}
+
 	public function test(){
 		// $pdo = connectDatabase();
         // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
