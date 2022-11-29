@@ -77,16 +77,16 @@
                         <- Zurück</button>
                             <button onclick="goNext(4)">Weiter -></button>
                 </div>
-                <!-- Vegetables -->
+                <!-- Vegetables (checkbox) -->
                 <div class="form5" id="slide5">
-                    <p>Wählen sie Ihr Gemüse:</p>
-                    <input type="radio" class="vegetables" name="Pineapple" value="Ananas">
+                    <p>Wählen sie Ihr Brot:</p>
+                    <input type="checkbox" class="vegetables" name="fav_language" value="Ananas">
                     <label for="javascript">Ananas</label><br>
-                    <input type="radio" class="vegetables" name="Banana" value="Banane">
+                    <input type="checkbox" class="vegetables" name="fav_language" value="Banane">
                     <label for="javascript">Banane</label><br>
-                    <input type="radio" class="vegetables" name="Mushrooms" value="Champignon">
+                    <input type="checkbox" class="vegetables" name="fav_language" value="Champignon">
                     <label for="javascript">Champignon</label><br>
-                    <input type="radio" class="vegetables" name="Cucumber" value="Gurke">
+                    <input type="checkbox" class="vegetables" name="fav_language" value="Gurke">
                     <label for="javascript">Gurke</label><br><br>
                     <button onclick="goBack(5)">
                         <- Zurück</button>
@@ -107,12 +107,10 @@
                         <input type="text" id="sauce" name="sauce"><br>
                         <label for="vegetables">Gemüse:</label><br>
                         <input type="text" id="vegetables" name="vegetables"><br><br>
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Bestellen ->">
                     </form>
 
-                    <button onclick="goBack(6)">
-                        <- Zurück</button>
-                            <button>Bestellen -></button>
+                    <button onclick="goBack(6)"><- Zurück</button>
                 </div>
             </div>
             <div class="footer">

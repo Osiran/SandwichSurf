@@ -25,5 +25,7 @@
             <?php include 'app/Controllers/inc/footer.inc.php'; ?>
         </div>
     </div>
+
+    <script></script>
 </body>
 </html>

@@ -8,6 +8,7 @@ $routes = [
 	'orderNr' => 'Controller@orderNr',
 	'login' => 'Controller@login',
 	'test' => 'Controller@test',
+	'add_order' => 'Controller@add_order',
 ];
 
 $router = new Router($routes);
