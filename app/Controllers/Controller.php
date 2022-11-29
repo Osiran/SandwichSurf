@@ -44,7 +44,7 @@ class Controller
 	}
 
 	public function ingredient(){
-		require 'app/Views/ingridients.view.php';
+		require 'app/Views/ingredient.view.php';
 	}
 
 	public function test(){
