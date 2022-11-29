@@ -24,8 +24,12 @@ class Controller
 	}
 
 	public function loginControl(){
-		
+
 		require 'app/Controllers/inc/loginControl.inc.php';
+	}
+
+	public function ingredient(){
+		require 'app/Views/ingridients.view.php';
 	}
 
 	public function test(){
