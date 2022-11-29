@@ -21,11 +21,11 @@
                     <table>
                         <tr>
                             <td><label for="name">Name:</label></td>
-                            <td><input type="text" name="name" id="name"></td>
+                            <td><input type="text" name="pk_staffId" id="pk_staffId" required></td>
                         </tr>
                         <tr>
                             <td><label for="password">Passwort:</label></td>
-                            <td><input type="password" name="password" id="password"></td>
+                            <td><input type="password" name="password" id="password" required></td>
                         </tr>
                         <tr>
                             <td colspan="2"><button type="submit">Absenden</button></td>
