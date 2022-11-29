@@ -24,6 +24,19 @@ class Controller
 	}
 
 	public function loginControl(){
+		$errors = [];
+
+		if ($_POST['pk_staffId'] == "") array_push($errors, "Bitte eine ID angeben");
+		if ($_POST['password'] == "") array_push($errors, "Bitte ein Passwort angeben");
+		
+
+		if ($errors == []) {
+			require 'app/Models/Staff.php';
+			$staff = new Staff();
+			if ($staff->login($_POST['pk_staffId'], $_POST['password'])) {
+				// login succeeded -> go to overview if staff; go to ingredients if admin
+			}
+		}
 
 		require 'app/Controllers/inc/loginControl.inc.php';
 	}
