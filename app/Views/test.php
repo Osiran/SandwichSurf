@@ -78,14 +78,14 @@
                 <!-- Vegetables (checkbox) -->
                 <div class="form5" id="slide5">
                     <p>Choose your vegetables:</p>
-                    <input type="radio" class="vegetables" name="fav_language" value="Ananas">
-                    <label for="javascript">Cocktail</label><br>
-                    <input type="radio" class="vegetables" name="fav_language" value="Banane">
-                    <label for="javascript">Ketchup</label><br>
-                    <input type="radio" class="vegetables" name="fav_language" value="Champignon">
-                    <label for="javascript">Mayonnaise</label><br>
-                    <input type="radio" class="vegetables" name="fav_language" value="Gurke">
-                    <label for="javascript">Senf</label><br><br>
+                    <input type="checkbox" class="vegetables" name="fav_language" value="Ananas">
+                    <label for="javascript">Ananas</label><br>
+                    <input type="checkbox" class="vegetables" name="fav_language" value="Banane">
+                    <label for="javascript">Banane</label><br>
+                    <input type="checkbox" class="vegetables" name="fav_language" value="Champignon">
+                    <label for="javascript">Champignon</label><br>
+                    <input type="checkbox" class="vegetables" name="fav_language" value="Gurke">
+                    <label for="javascript">Gurke</label><br><br>
                     <button onclick="goBack(5)">
                         <- Zurück</button>
                             <button onclick="goNext(5)">Fertig -></button>
