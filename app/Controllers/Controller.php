@@ -10,8 +10,8 @@ class Controller
 	public function order(){
 		require 'app/Models/Order.php';
 
-		$orders = Order::getAll();
-
+		// $orders = Order::getAll();
+		
 		
 
 		require 'app/Views/order.view.php';
@@ -78,10 +78,12 @@ class Controller
 	}
 
 	public function add_order(){
+		require 'app/Models/Order.php';
+
 		$pdo = connectDatabase();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$Order = Order::create($_POST['bread'], $_POST['cheese'], $_POST['meat'], $_POST['sauce'], $_POST['vegetables']);
+		Order::create($_POST['bread'], $_POST['meat'], $_POST['cheese'], $_POST['sauce'], $_POST['vegetables']);
 	}
 
 /* Shows all orders currently made */
