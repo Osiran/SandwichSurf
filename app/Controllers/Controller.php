@@ -8,6 +8,12 @@ class Controller
 	}
 
 	public function order(){
+		require 'app/Models/Order.php';
+
+		$orders = Order::getAll();
+
+		
+
 		require 'app/Views/order.view.php';
 	}
 
@@ -33,15 +39,29 @@ class Controller
 		if ($errors == []) {
 			require 'app/Models/Staff.php';
 			$staff = new Staff();
-			if ($staff->login($_POST['pk_staffId'], $_POST['password'])) {
+			$staffId = $staff->login($_POST['pk_staffId'], $_POST['password']);
+			if ($staffId) {
 				// login succeeded -> go to overview if staff; go to ingredients if admin
+				if ($staffId == 1) header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . 'ingredient');
+				else header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . 'overview');
 			}
 		}
-
-		require 'app/Controllers/inc/loginControl.inc.php';
+		header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . 'login');
 	}
 
 	public function ingredient(){
+		require 'app/Models/Bread.php';
+		require 'app/Models/Cheese.php';
+		require 'app/Models/Meat.php';
+		require 'app/Models/Sauce.php';
+		require 'app/Models/Vegetables.php';
+
+		$breadArray = Bread::getAll();
+		$cheeseArray = Bread::getAll();
+		$meatArray = Bread::getAll();
+		$sauceArray = Bread::getAll();
+		$vegetablesArray = Bread::getAll();
+
 		require 'app/Views/ingridients.view.php';
 	}
 

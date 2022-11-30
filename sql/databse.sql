@@ -73,5 +73,6 @@ CREATE TABLE `orders_vegetables`(
 CREATE TABLE `staff`(
     pk_staffId int NOT NULL AUTO_INCREMENT,
     password varchar(16),
+    userRole varchar(10),
     PRIMARY KEY (pk_staffId)
 );
