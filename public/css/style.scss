@@ -2,61 +2,76 @@
 @import url(js.css);
 body{
     margin: 0;
-}
-p{
-    font-family: sans-serif;
-    font-size: 1.2em;
-}
-.container{
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    grid-template-columns: 100%;
-    grid-template-areas:
-    'header'
-    'main'
-    'footer';
-    .header{
-        grid-area: header;
-        border: 1px solid #41f010;
-        padding: 0;
-        .border1{
-            border: 1px solid #2e6ff1;
-        }
-        .border2{
-            border: 1px solid #41f010;
-        }
-        h1{
-            text-align: center;
-            font-size: 4em;
-            font-family: sans-serif;
-            color: #41f010;
-            background-color: #2e6ff1;
-        }
-    }
-    .main{
-        .text{
-            text-align: center;
-        }
-        .buttons{
-            text-align: center;
-        }
-    }
-    .footer{
-        p{
-            font-size: 1em;
-        }
-        width: 100%;
-        text-align: center;
-        grid-area: footer;
+    background-color: #2e6ff121;
+    .container{
         display: grid;
-        grid-template-columns: repeat(3, 33.33%);
-        grid-template-areas: 'addresse  open  createdBy';
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 100%;
+        grid-template-areas:
+        'header'
+        'main'
+        'footer';
+        .header{
+            grid-area: header;
+            .border1{
+                border-top: 5px solid #2e6ff1;
+                height: 5px;
+                background-color: #41f010;
+                border-bottom: 5px solid #2e6ff1;
+            }
+            .border2{
+                height: 5px;
+                background-color: #41f010;
+            }
+            h1{
+                text-align: center;
+                font-size: 4em;
+                font-family: sans-serif;
+                color: #41f010;
+                background-color: #2e6ff1;
+                padding: 50px;
+                margin: 0;
+            }
+        }
+        .main{
+            
+            .text{
+                text-align: center;
+                p{
+                    font-size: 1.3em;
+                    font-family: sans-serif;
+                }
+            }
+            .buttons{
+                text-align: center;
+                button{
+                    font-size: 1.1em;
+                    border-radius: 12px;
+                    border: 1px solid #2e6ff1;
+                    background-color: #41f010;
+                }
+            }
+            .js{
+                margin: auto;
+            }
+        }
+        .footer{
+            p{
+                font-size: 1em;
+            }
+            width: 100%;
+            text-align: center;
+            grid-area: footer;
+            display: grid;
+            grid-template-columns: repeat(3, 33.33%);
+            grid-template-areas: 'addresse  open  createdBy';
 
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        .addresse{grid-area: addresse;}
-        .open{grid-area: open;}
-        .createdBy{grid-area: createdBy;}
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            .addresse{grid-area: addresse;}
+            .open{grid-area: open;}
+            .createdBy{grid-area: createdBy;}
+        }
     }
 }
