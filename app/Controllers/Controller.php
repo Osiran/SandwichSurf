@@ -63,5 +63,14 @@ class Controller
 
 		$Order = Order::create($_POST['bread'], $_POST['cheese'], $_POST['meat'], $_POST['sauce'], $_POST['vegetables']);
 	}
+
+/* Shows all orders currently made */
+	public function showAllOrders(){
+		require 'app/Models/Order.php';
+
+		$orders = Order::getAll();
+
+		require 'app/Views/order.view.php';
+	}
 }
 
