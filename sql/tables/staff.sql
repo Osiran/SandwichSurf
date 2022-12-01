@@ -1,5 +1,12 @@
-USE DATABASE `sandwichsurf`;
+-- Host: 127.0.0.1
+-- Username: Root
+-- Server: MariaDB
+-- Password: ""
 
-INSERT INTO staff (password, userRole) VALUES
-("admin", "Admin"),
-("staff", "Staff");
+-- Use Database
+USE DATABASE `sandwichsurf`;
+INSERT INTO `staff`
+(`password`,`userRole`)
+values
+('abc123','Admin'),
+('abc123','Staff');

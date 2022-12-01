@@ -23,7 +23,7 @@ function post(string $key, $default = '')
  */
 $dbInstance = null;
 
-function db(): PDO
+function db()
 {
     global $dbInstance;
     global $db;
@@ -33,7 +33,7 @@ function db(): PDO
     }
 
     try {
-        $dbInstance = new PDO('mysql:host=127.0.0.1;dbname=' . $db['name'], $db['username'], $db['password'], [
+        $dbInstance = new PDO('mysql:host=127.0.0.1;dbname='.'sandwichsurf', 'root', '', [
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
         ]);
