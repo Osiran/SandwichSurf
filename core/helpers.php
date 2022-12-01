@@ -26,6 +26,7 @@ $dbInstance = null;
 function db(): PDO
 {
     global $dbInstance;
+    global $db;
 
     if ($dbInstance) {
         return $dbInstance;
@@ -39,4 +40,5 @@ function db(): PDO
     } catch (PDOException $e) {
         die('Keine Verbindung zur Datenbank möglich: ' . $e->getMessage());
     }
+    return $dbInstance;
 }

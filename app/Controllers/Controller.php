@@ -26,6 +26,7 @@ class Controller
 	}
 
 	public function login(){
+		$errors = [];
 		require 'app/Views/login.view.php';
 	}
 
@@ -46,7 +47,7 @@ class Controller
 				else header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . 'overview');
 			}
 		}
-		header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . 'login');
+		require 'app/Views/login.view.php';
 	}
 
 	public function ingredient(){
@@ -62,7 +63,7 @@ class Controller
 		$sauceArray = Bread::getAll();
 		$vegetablesArray = Bread::getAll();
 
-		require 'app/Views/ingridients.view.php';
+		require 'app/Views/ingredients.view.php';
 	}
 
 	public function test(){
@@ -78,8 +79,7 @@ class Controller
 	}
 
 	public function add_order(){
-		$pdo = connectDatabase();
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		
 
 		$Order = Order::create($_POST['bread'], $_POST['cheese'], $_POST['meat'], $_POST['sauce'], $_POST['vegetables']);
 	}

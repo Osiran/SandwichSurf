@@ -56,7 +56,6 @@ CREATE TABLE `orders`(
     fk_cheese int,
     fk_meat int,
     fk_sauce int,
-    fk_orders_vegetables int,
     timestamp int,
     PRIMARY KEY (pk_orders)
 );

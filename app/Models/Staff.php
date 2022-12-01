@@ -17,7 +17,7 @@ class Staff {
 
         $result = $statement->fetch();
         if ($result) {
-            if (password_verify($password, $result['password'])) {
+            if ($password == $result['password']) {
                 $this->pk_staffId = $id;
                 return $this->pk_staffId;
             }
