@@ -31,6 +31,9 @@
                             <td colspan="2"><button type="submit">Absenden</button></td>
                         </tr>
                     </table>
+                    <?php foreach ($errors as $e) { ?>
+                        <p class="error"><?= $e ?></p>
+                    <?php } ?>
                 </form>
             </div>
         </div>

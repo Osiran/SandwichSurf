@@ -73,3 +73,7 @@ body .container .footer .open {
 body .container .footer .createdBy {
   grid-area: createdBy;
 }/*# sourceMappingURL=style.css.map */
+
+.error {
+  color: red;
+}

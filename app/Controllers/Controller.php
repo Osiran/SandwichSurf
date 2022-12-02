@@ -8,11 +8,17 @@ class Controller
 	}
 
 	public function order(){
-		require 'app/Models/Order.php';
+		require 'app/Models/Bread.php';
+		require 'app/Models/Cheese.php';
+		require 'app/Models/Meat.php';
+		require 'app/Models/Sauce.php';
+		require 'app/Models/Vegetables.php';
 
-		// $orders = Order::getAll();
-		
-		
+		$breadArray = Bread::getAll();
+		$cheeseArray = Cheese::getAll();
+		$meatArray = Meat::getAll();
+		$sauceArray = Sauce::getAll();
+		$vegetablesArray = Vegetables::getAll();
 
 		require 'app/Views/order.view.php';
 	}
@@ -58,10 +64,10 @@ class Controller
 		require 'app/Models/Vegetables.php';
 
 		$breadArray = Bread::getAll();
-		$cheeseArray = Bread::getAll();
-		$meatArray = Bread::getAll();
-		$sauceArray = Bread::getAll();
-		$vegetablesArray = Bread::getAll();
+		$cheeseArray = Cheese::getAll();
+		$meatArray = Meat::getAll();
+		$sauceArray = Sauce::getAll();
+		$vegetablesArray = Vegetables::getAll();
 
 		require 'app/Views/ingredients.view.php';
 	}
@@ -79,9 +85,10 @@ class Controller
 	}
 
 	public function add_order(){
-		
+		require 'app/Models/Order.php';
 
-		Order::create($_POST['bread'], $_POST['meat'], $_POST['cheese'], $_POST['sauce'], $_POST['vegetables']);
+		$order = Order::create($_POST['bread'], $_POST['meat'], $_POST['cheese'], $_POST['sauce'], $_POST['vegetables']);
+	
 	}
 
 /* Shows all orders currently made */
