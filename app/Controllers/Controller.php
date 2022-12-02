@@ -49,8 +49,8 @@ class Controller
 			$staffId = $staff->login($_POST['pk_staffId'], $_POST['password']);
 			if ($staffId) {
 				// login succeeded -> go to overview if staff; go to ingredients if admin
-				if ($staffId == 1) header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . 'ingredient');
-				else header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . 'overview');
+				if ($staffId == 1) header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . '/ingredient');
+				else header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . '/overview');
 			}
 		}
 		require 'app/Views/login.view.php';

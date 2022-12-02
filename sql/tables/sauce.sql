@@ -4,7 +4,7 @@
 -- Password: ""
 
 -- Use Database
-USE DATABASE `sandwichsurf`;
+USE `sandwichsurf`;
 INSERT INTO `sauce`
 (`label`,`img`)
 values

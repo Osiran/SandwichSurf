@@ -21,7 +21,7 @@ class Vegetables {
 
         $vegetables = [];
 
-        foreach ($statement->getAll() as $v) {
+        foreach ($statement->fetchAll() as $v) {
             array_push($vegetables, new Vegetables($v['pk_vegetables']));
         }
 
@@ -41,7 +41,7 @@ class Vegetables {
     // get data from database and set variables
     function setData() {
         $statement = $this->db->prepare('SELECT label, img FROM vegetables WHERE pk_vegetables = :id LIMIT 1');
-        $statement->bindParam(':label', $this->pk_vegetables);
+        $statement->bindParam(':id', $this->pk_vegetables);
         $statement->execute();
 
         if ($statement->rowCount() > 0) {

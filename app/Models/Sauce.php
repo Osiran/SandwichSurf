@@ -40,7 +40,7 @@ class Sauce {
     // get data from database and set variables
     function setData() {
         $statement = $this->db->prepare('SELECT label, img FROM sauce WHERE pk_sauce = :id LIMIT 1');
-        $statement->bindParam(':label', $this->pk_sauce);
+        $statement->bindParam(':id', $this->pk_sauce);
         $statement->execute();
 
         if ($statement->rowCount() > 0) {

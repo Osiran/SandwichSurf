@@ -41,7 +41,7 @@ class Cheese {
         $statement = $this->db->prepare('SELECT label, img from cheese WHERE pk_cheese = :id LIMIT 1');
         $statement->bindParam(':id', $this->pk_cheese);
         $statement->execute();
-        if ($result->rowCount() > 0) {
+        if ($statement->rowCount() > 0) {
             $this->label = $statement->fetch()['label'];
             $this->img = $statement->fetch()['img'];
         }
