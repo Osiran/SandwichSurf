@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   background-color: rgba(46, 111, 241, 0.1294117647);
@@ -73,7 +72,3 @@ body .container .footer .open {
 body .container .footer .createdBy {
   grid-area: createdBy;
 }/*# sourceMappingURL=style.css.map */
-
-.error {
-  color: red;
-}
