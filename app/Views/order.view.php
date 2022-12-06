@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="public/css/style.css">
         <title>Bestellungen</title>
-        <script src="public/js/app.js"></script>
 </head>
 
 <body>
@@ -33,7 +32,7 @@
                 <!-- Cheese -->
                 <div class="form2" id="slide2">
                     <p>Wählen sie Ihren Käse:</p>
-                    <?php foreach($cheeseArray as $chesse){ ?>
+                    <?php foreach($cheeseArray as $cheese){ ?>
                         <input type="radio" name="cheese" value="<?= $cheese->getPK() ?>" id="<?= $cheese->getLabel() ?>">
                         <label for="<?= $cheese->getLabel() ?>"><?= $cheese->getLabel() ?></label>
                     <?php } ?>
@@ -104,6 +103,9 @@
                 <?php include 'app/Controllers/inc/footer.inc.php'; ?>
             </div>
         </div>
+
+        <!-- JS-File always import here! -->
+        <script src="public/js/app.js"></script>
     </body>
     
     </html>
