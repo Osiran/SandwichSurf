@@ -33,7 +33,7 @@
                 <!-- Cheese -->
                 <div class="form2" id="slide2">
                     <p>Wählen sie Ihren Käse:</p>
-                    <?php foreach($cheeseArray as $chesse){ ?>
+                    <?php foreach($cheeseArray as $cheese){ ?>
                         <input type="radio" name="cheese" value="<?= $cheese->getPK() ?>" id="<?= $cheese->getLabel() ?>">
                         <label for="<?= $cheese->getLabel() ?>"><?= $cheese->getLabel() ?></label>
                     <?php } ?>
