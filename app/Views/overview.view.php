@@ -17,7 +17,9 @@
                 <p>Hier sind alle Bestellungen im Überblick</p>
             </div>
             <div class="js">
-                <!-- Hier die JS-Datei einfügen -->
+                <!-- Hier das JS-HTML einfügen -->
+                <!-- Leave the Tables at the end! -->
+                <table><tr><td><a href="login"><button type="button">Zurück zum Login</button></a></td></tr></table>
             </div>
         </div>
         <div class="footer">
