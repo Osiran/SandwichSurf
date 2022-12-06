@@ -65,3 +65,12 @@ function goBack(index){
     document.getElementById("slide" + index).style.display="none";
     document.getElementById("slide" + (index - 1)).style.display="block";
 }
+
+/* Validation for the first button */
+function checkValue(){
+    if(document.querySelector('.bread:checked').value){
+        document.querySelector('button').disabled = false;
+    }else{
+        document.querySelector('button').disabled = true;
+    }
+}

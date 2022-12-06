@@ -18,6 +18,7 @@
             </div>
             <div class="js">
                 <!-- Hier die JS-Datei einfügen -->
+                <table><tr><th><a href="login"><button type="button">Zurück zum Login</button></a></th></tr></table>
             </div>
         </div>
         <div class="footer">
