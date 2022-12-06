@@ -17,10 +17,7 @@
                 <p>Hier sind alle Bestellungen im Überblick</p>
             </div>
             <div class="js">
-                <!-- All orders are shown here -->
-                <?php foreach($orders as $order){ ?>
-                    <p><?= $order ?></p>
-                <?php } ?>
+                <!-- Hier die JS-Datei einfügen -->
             </div>
         </div>
         <div class="footer">
