@@ -76,3 +76,7 @@ body .container .footer .createdBy {
 .error {
   color: red;
 }/*# sourceMappingURL=style.css.map */
+
+.final input {
+  display:none;
+}
