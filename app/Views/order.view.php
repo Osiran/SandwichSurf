@@ -24,7 +24,7 @@
                     <p>Wählen sie Ihr Brot:</p>
                     <?php foreach($breadArray as $bread){ ?>
                         <input type="radio" class="bread" name="bread" value="<?= $bread->getPK() ?>" id="<?= $bread->getLabel() ?>">
-                        <label for="<?= $bread->getLabel() ?>"><?= $bread->getLabel() ?></label>
+                        <label for="<?= $bread->getLabel() ?>"><?= $bread->getLabel() ?></label><br>
                     <?php } ?>
                     <br><br>
                     <button onclick="goNext(1)">Weiter -></button>

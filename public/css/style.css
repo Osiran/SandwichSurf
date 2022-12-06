@@ -46,7 +46,7 @@ body .container .main .buttons button {
   border: 1px solid #2e6ff1;
   background-color: #41f010;
 }
-body .container .main .js {
+body .container .main .js table {
   margin: auto;
 }
 body .container .footer {
@@ -71,4 +71,8 @@ body .container .footer .open {
 }
 body .container .footer .createdBy {
   grid-area: createdBy;
+}
+
+.error {
+  color: red;
 }/*# sourceMappingURL=style.css.map */
