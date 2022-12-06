@@ -22,12 +22,13 @@
                 <!-- Bread -->
                 <div class="form1" id="slide1">
                     <p>Wählen sie Ihr Brot:</p>
+                    <input type="radio" class="bread" name="bread" onclick="checkValue()" value="Habasch" id="glgögn">
                     <?php foreach($breadArray as $bread){ ?>
-                        <input type="radio" class="bread" name="bread" value="<?= $bread->getPK() ?>" id="<?= $bread->getLabel() ?>">
+                        <input type="radio" class="bread" name="bread" onclick="checkValue()" value="<?= $bread->getPK() ?>" id="<?= $bread->getLabel() ?>">
                         <label for="<?= $bread->getLabel() ?>"><?= $bread->getLabel() ?></label><br>
                     <?php } ?>
                     <br><br>
-                    <button onclick="goNext(1)">Weiter -></button>
+                    <button onclick="goNext(1)" disabled>Weiter -></button>
                 </div>
                 <!-- Cheese -->
                 <div class="form2" id="slide2">
