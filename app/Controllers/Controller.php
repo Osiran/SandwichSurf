@@ -69,7 +69,7 @@ class Controller
 		$sauceArray = Sauce::getAll();
 		$vegetablesArray = Vegetables::getAll();
 
-		require 'app/Views/ingredients.view.php';
+		require 'app/Views/ingredient.view.php';
 	}
 
 	public function test(){

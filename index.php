@@ -5,12 +5,13 @@ $routes = [
 	'' => 'Controller@index',
 	'home' => 'Controller@index',
 	'orders' => 'Controller@order',
+	'add_order' => 'Controller@add_order',
 	'orderNr' => 'Controller@orderNr',
 	'login' => 'Controller@login',
-	'test' => 'Controller@test',
-	'add_order' => 'Controller@add_order',
+	'loginControl' => 'Controller@loginControl',
 	'ingredient' => 'Controller@ingredient',
 	'overview' => 'Controller@overview', 
+	'test' => 'Controller@test',
 ];
 
 $router = new Router($routes);

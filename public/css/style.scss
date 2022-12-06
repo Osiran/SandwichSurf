@@ -51,7 +51,9 @@ body{
                 }
             }
             .js{
-                margin: auto;
+                table{
+                    margin: auto;
+                }
             }
         }
         .footer{
@@ -73,4 +75,8 @@ body{
             .createdBy{grid-area: createdBy;}
         }
     }
+}
+
+.error{
+    color: red;
 }
