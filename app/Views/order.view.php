@@ -70,7 +70,7 @@
                     <p>Wählen sie Ihr Gemüse:</p>
                     <?php foreach($vegetablesArray as $vegetable){ ?>
                         <input type="checkbox" name="vegetables" value="<?= $vegetable->getPK() ?>" id="<?= $vegetable->getLabel() ?>">
-                        <label for="<?= $vegetable->getLabel() ?>"></label>
+                        <label for="<?= $vegetable->getLabel() ?>"><?= $vegetable->getLabel() ?></label>
                     <?php } ?>
                     <br><br>
                     <button onclick="goBack(5)">
