@@ -30,6 +30,9 @@
                         <tr>
                             <td colspan="2"><button type="submit">Absenden</button></td>
                         </tr>
+                        <tr>
+                            <td colspan="2"><a href="home"><button type="button">Zurück zur Homepage</button></a></td>
+                        </tr>
                     </table>
                     <?php foreach ($errors as $e) { ?>
                         <p class="error"><?= $e ?></p>
