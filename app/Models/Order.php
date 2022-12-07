@@ -8,7 +8,6 @@ class Order {
     private $cheese;
     private $sauce;
     private $vegetables;
-    private $timestamp;
 
     // constructor
     function __construct($id) {
@@ -32,15 +31,14 @@ class Order {
     }
 
     // inserts a dataset into the database and returns instance of Order
-    static function create($bread, $meat, $cheese, $sauce, $timestamp) {
+    static function create($bread, $meat, $cheese, $sauce) {
         $db = db();
-        $statement = $db->prepare('INSERT INTO orders (pk_bread, pk_meat, pk_cheese, pk_sauce, timestamp) VALUES 
+        $statement = $db->prepare('INSERT INTO orders (pk_bread, pk_meat, pk_cheese, pk_sauce) VALUES 
         (:pk_bread, :pk_meat, :pk_cheese, :pk_sauce, :timestamp)');
         $statement->bindParam(':pk_bread', $bread);
         $statement->bindParam(':pk_meat', $meat);
         $statement->bindParam(':pk_cheese', $cheese);
         $statement->bindParam(':pk_sauce', $sauce);
-        $statement->bindParam(':timestamp', $timestamp);
 
         if ($statement->execute()) return new Order($db->lastInsertId());
         return null;
@@ -49,7 +47,7 @@ class Order {
     // set data
 
     function setData() {
-        $statement = $this->db->prepare('SELECT fk_bread, fk_meat, fk_cheese, fk_sauce, timestamp FROM orders WHERE pk_orders = :id LIMIT 1');
+        $statement = $this->db->prepare('SELECT fk_bread, fk_meat, fk_cheese, fk_sauce FROM orders WHERE pk_orders = :id LIMIT 1');
         $statement->bindParam(':id', $this->pk_orders);
         $statement->execute();
         $result = $statement->fetch();
@@ -57,7 +55,6 @@ class Order {
         $this->meat = new Meat($result['fk_meat']);
         $this->cheese = new Cheese($result['fk_cheese']);
         $this->sauce = new Sauce($result['fk_sauce']);
-        $this->timestamp = $result['timestamp'];
     }
 
     function setVegetables() {
@@ -116,14 +113,13 @@ class Order {
     }
 
     // updates this order
-    function update($bread, $meat, $cheese, $sauce, $timestamp) {
+    function update($bread, $meat, $cheese, $sauce) {
         $statement = $this->db->prepare('UPDATE orders SET fk_bread = :bread, fk_meat = :meat, fk_cheese = :cheese, 
-        fk_sauce = :sauce, timestamp = :timestamp WHERE pk_orders = :id');
+        fk_sauce = :sauce WHERE pk_orders = :id');
         $statement->bindParam(':bread', $bread);
         $statement->bindParam(':meat', $meat);
         $statement->bindParam(':cheese', $cheese);
         $statement->bindParam(':sauce', $sauce);
-        $statement->bindParam(':timestamp', $timestamp);
         $statement->bindParam(':id', $this->pk_orders);
 
         if ($statement->execute()) {
