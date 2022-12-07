@@ -17,7 +17,9 @@
                 <p>Hier sind alle Bestellungen im Überblick</p>
             </div>
             <div class="js">
-                <!-- Hier die JS-Datei einfügen -->
+                <?php foreach($orderArray as $order){ ?>
+                    <p><?= $order->getLabel() ?></p>
+                <?php } ?>
                 <table><tr><th><a href="login"><button type="button">Zurück zum Login</button></a></th></tr></table>
             </div>
         </div>
