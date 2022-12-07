@@ -28,6 +28,10 @@ class Controller
 	}
 
 	public function overview(){
+		require 'app/Models/Order.php';
+
+		$orderArray = Order::getAll();
+
 		require 'app/Views/overview.view.php';
 	}
 
