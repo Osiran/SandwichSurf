@@ -16,6 +16,12 @@
             <div class="text">
                 <p>Das ist ein Text</p>
             </div>
+            <div>
+                <table>
+                    <th>ID</th>
+                    <th>Bestellungeb</th>
+                </table>
+            </div>
             <div class="js">
                 <!-- Bread -->
                 <div class="form1" id="slide1">
