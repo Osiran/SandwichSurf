@@ -61,6 +61,14 @@ class Controller
 	}
 
 	public function ingredient(){
+		require 'app/Models/Order.php';
+
+		$orderArray = Order::getAll();
+
+		require 'app/Views/ingredient.view.php';
+	}
+
+	public function test(){
 		require 'app/Models/Bread.php';
 		require 'app/Models/Cheese.php';
 		require 'app/Models/Meat.php';
@@ -72,18 +80,6 @@ class Controller
 		$meatArray = Meat::getAll();
 		$sauceArray = Sauce::getAll();
 		$vegetablesArray = Vegetables::getAll();
-
-		require 'app/Views/ingredient.view.php';
-	}
-
-	public function test(){
-		// $pdo = connectDatabase();
-        // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-		// $Colley = new ColleyLogin();
-
-		// $code = $Colley -> CheckEnteredCode();
-		// $code = $code->fetchAll();
 
 		require 'app/Views/test.php';
 	}

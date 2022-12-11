@@ -26,19 +26,13 @@
                         <th>Sauce</th>
                     </tr>
                     <?php
-                    // LOOP TILL END OF DATA
-                    while ($rows = $result->getAll()) {
-                    ?>
-                        <tr>
-                            <td><?php echo $rows['bread']; ?></td>
-                            <td><?php echo $rows['cheese']; ?></td>
-                            <td><?php echo $rows['meat']; ?></td>
-                            <td><?php echo $rows['vegatbles']; ?></td>
-                            <td><?php echo $rows['sauce']; ?></td>
-                        </tr>
-                    <?php
-                    }
-                    ?>
+                    foreach ($orderArray as $order) { ?>
+                            <td><?php echo $order['bread']; ?></td>
+                            <td><?php echo $order['cheese']; ?></td>
+                            <td><?php echo $order['meat']; ?></td>
+                            <td><?php echo $order['vegatbles']; ?></td>
+                            <td><?php echo $order['sauce']; ?></td>
+                <?php } ?>
                 </table>
             </div>
             <div class="js">
