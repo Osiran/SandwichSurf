@@ -74,3 +74,12 @@ function checkValue(){
         document.querySelector('button').disabled = true;
     }
 }
+
+/* Get Row Data */
+function checkValue(){
+    if(document.querySelector('.bread:checked').value){
+        document.querySelector('button').disabled = false;
+    }else{
+        document.querySelector('button').disabled = true;
+    }
+}
