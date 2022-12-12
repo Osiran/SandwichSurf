@@ -24,7 +24,7 @@
                     <p>Wählen sie Ihr Brot:</p>
                     <?php foreach ($breadArray as $bread) { ?>
                         <input type="radio" class="bread" name="bread" onclick="checkValue()" value="<?= $bread->getPK() ?>" id="<?= $bread->getLabel() ?>">
-                        <label for="<?= $bread->getLabel() ?>"><?= $bread->getLabel() ?></label><br>
+                        <label id="bread<?= $bread->getPK() ?>" for="<?= $bread->getLabel() ?>"><?= $bread->getLabel() ?></label><br>
                     <?php } ?>
                     <br><br>
                     <button onclick="goNext(1)" disabled>Weiter -></button>
@@ -34,7 +34,7 @@
                     <p>Wählen sie Ihren Käse:</p>
                     <?php foreach ($cheeseArray as $cheese) { ?>
                         <input type="radio" class="cheese" name="cheese" value="<?= $cheese->getPK() ?>" id="<?= $cheese->getLabel() ?>">
-                        <label for="<?= $cheese->getLabel() ?>"><?= $cheese->getLabel() ?></label>
+                        <label id="cheese<?= $cheese->getPK() ?>" for="<?= $cheese->getLabel() ?>"><?= $cheese->getLabel() ?></label>
                     <?php } ?>
                     <br><br>
                     <button onclick="goBack(2)">
@@ -46,7 +46,7 @@
                     <p>Wählen sie Ihre Fleischsorte:</p>
                     <?php foreach ($meatArray as $meat) { ?>
                         <input type="radio" class="meat" name="meat" value="<?= $meat->getPK() ?>" id="<?= $meat->getLabel() ?>">
-                        <label for="<?= $meat->getLabel() ?>"><?= $meat->getLabel() ?></label>
+                        <label id="meat<?= $meat->getPK() ?>" for="<?= $meat->getLabel() ?>"><?= $meat->getLabel() ?></label>
                     <?php } ?>
                     <br><br>
                     <button onclick="goBack(3)">
@@ -58,7 +58,7 @@
                     <p>Wählen sie Ihre Sauce:</p>
                     <?php foreach ($sauceArray as $sauce) { ?>
                         <input type="radio" class="sauce" name="sauce" value="<?= $sauce->getPK() ?>" id="<?= $sauce->getLabel() ?>">
-                        <label for="<?= $sauce->getLabel() ?>"><?= $sauce->getLabel() ?></label>
+                        <label id="sauce<?= $sauce->getPK() ?>" for="<?= $sauce->getLabel() ?>"><?= $sauce->getLabel() ?></label>
                     <?php } ?>
                     <br><br>
                     <button onclick="goBack(4)">
@@ -82,17 +82,17 @@
                     <p>Ihre Auswahl:</p>
 
                     <form class="final" action="add_order" method="POST">
-                        <label for="bread">Brot:</label><br>
+                        <label for="bread">Brot: <span id="breadname"></span></label><br>
                         <input type="text" id="bread" name="bread"><br>
-                        <label for="cheese">Käse:</label><br>
+                        <label for="cheese">Käse: <span id="cheesename"></span></label><br>
                         <input type="text" id="cheese" name="cheese"><br>
-                        <label for="meat">Fleisch:</label><br>
+                        <label for="meat">Fleisch: <span id="meatname"></span></label><br>
                         <input type="text" id="meat" name="meat"><br>
-                        <label for="sauce">Sauce:</label><br>
+                        <label for="sauce">Sauce: <span id="saucename"></span></label><br>
                         <input type="text" id="sauce" name="sauce"><br>
                         <label for="vegetables">Gemüse:</label><br>
                         <input type="text" id="vegetables" name="vegetables"><br><br>
-                        <input type="submit" value="Bestellen ->">
+                        <button type="submit">Bestellen -></button>
                     </form>
 
                     <button onclick="goBack(6)">
