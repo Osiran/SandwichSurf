@@ -35,22 +35,18 @@ function goNext(index){
     switch(index){
         case 1:
             bread = document.querySelector('.bread:checked').value;
-            breadname = document.getElementById("bread" + bread).innerHTML;
             console.log(bread);
             break;
         case 2:
             cheese = document.querySelector('.cheese:checked').value;
-            cheesename = document.getElementById("cheese" + cheese).innerHTML;
             console.log(cheese);
             break;
         case 3:
             meat = document.querySelector('.meat:checked').value;
-            meatname = document.getElementById("meat" + meat).innerHTML;
             console.log(meat);
             break;
         case 4:
             sauce = document.querySelector('.sauce:checked').value;
-            saucename = document.getElementById("sauce" + sauce).innerHTML;
             console.log(sauce);
             break;
         case 5:
@@ -59,13 +55,9 @@ function goNext(index){
 
             /* Display order in form */
             document.getElementById("bread").value = bread;
-            document.getElementById("breadname").innerHTML = breadname;
             document.getElementById("cheese").value = cheese;
-            document.getElementById("cheesename").innerHTML = cheesename;
             document.getElementById("meat").value = meat;
-            document.getElementById("meatname").innerHTML = meatname;
             document.getElementById("sauce").value = sauce;
-            document.getElementById("saucename").innerHTML = saucename;
             document.getElementById("vegetables").value = vegetables;
             break;
         default:
