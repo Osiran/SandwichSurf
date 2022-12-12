@@ -21,6 +21,26 @@
             <div class="js">
                 <!-- Bread -->
                 <div class="form1" id="slide1">
+                    <table><tr><th>Wählen Sie bitte ein Brot aus</th></tr></table>
+                    <table>
+                        <?php foreach ($breadArray as $bread) { ?>
+                            <tr>
+                                <td>
+                                    <input type="radio" class="bread" name="bread" onclick="checkValue()" value="<?= $bread->getPK() ?>" id="<?= $bread->getLabel() ?>">
+                                </td>
+                                <td>
+                                    <?= $bread->getLabel() ?>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </table>
+                    <table>
+                        <tr><td colspan="2"><button onclick="goNext(1)" disabled>Weiter -></button></td></tr>
+                    </table>
+                </div>
+                <?php /* ?>
+                <!-- Bread -->
+                <div class="form1" id="slide1">
                     <p>Wählen sie Ihr Brot:</p>
                     <?php foreach ($breadArray as $bread) { ?>
                         <input type="radio" class="bread" name="bread" onclick="checkValue()" value="<?= $bread->getPK() ?>" id="<?= $bread->getLabel() ?>">
@@ -28,8 +48,32 @@
                     <?php } ?>
                     <br><br>
                     <button onclick="goNext(1)" disabled>Weiter -></button>
-                </div>
+                </div> <?php */; ?>
                 <!-- Cheese -->
+
+                <div class="form2" id="slide2">
+                    <table><tr><th colspan="2">Wählen Sie bitte einen Käse aus</th></tr></table>
+                    <table>
+                        <?php foreach ($cheeseArray as $cheese) { ?>
+                            <tr>
+                                <td>
+                                    <input type="radio" class="cheese" name="cheese" value="<?= $cheese->getPK() ?>" id="<?= $cheese->getLabel() ?>">
+                                </td>
+                                <td>
+                                    <?= $cheese->getLabel() ?>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </table>
+                    <table>
+                        <tr>
+                            <td><button onclick="goBack(2)"><- Zurück</button></td>
+                            <td></td>
+                            <td><button onclick="goNext(2)">Weiter -></button></td>
+                        </tr>
+                    </table>
+                </div>
+                <?php /* <!-- Cheese -->
                 <div class="form2" id="slide2">
                     <p>Wählen sie Ihren Käse:</p>
                     <?php foreach ($cheeseArray as $cheese) { ?>
@@ -40,8 +84,32 @@
                     <button onclick="goBack(2)">
                         <- Zurück</button>
                             <button onclick="goNext(2)">Weiter -></button>
-                </div>
+                </div> */; ?>
+
                 <!-- Meat -->
+                <div class="form3" id="slide3">
+                    <table><tr><th colspan="2">Wählen Sie bitte ein Fleisch aus</th></tr></table>
+                    <table>
+                        <?php foreach ($meatArray as $meat) { ?>
+                            <tr>
+                                <td>
+                                    <input type="radio" class="meat" name="meat" value="<?= $meat->getPK() ?>" id="<?= $meat->getLabel() ?>">
+                                </td>
+                                <td>
+                                    <?= $meat->getLabel() ?>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </table>
+                    <table>
+                        <tr>
+                            <td><button onclick="goBack(3)"><- Zurück</button></td>
+                            <td></td>
+                            <td><button onclick="goNext(3)">Weiter -></button></td>
+                        </tr>
+                    </table>
+                </div>
+                <?php /* <!-- Meat -->
                 <div class="form3" id="slide3">
                     <p>Wählen sie Ihre Fleischsorte:</p>
                     <?php foreach ($meatArray as $meat) { ?>
@@ -52,8 +120,32 @@
                     <button onclick="goBack(3)">
                         <- Zurück</button>
                             <button onclick="goNext(3)">Weiter -></button>
-                </div>
+                </div> */; ?>
+
                 <!-- Sauce -->
+                <div class="form4" id="slide4">
+                    <table><tr><th colspan="2">Wählen Sie bitte eine Sauce aus</th></tr></table>
+                    <table>
+                        <?php foreach ($sauceArray as $sauce) { ?>
+                            <tr>
+                                <td>
+                                    <input type="radio" class="sauce" name="sauce" value="<?= $sauce->getPK() ?>" id="<?= $sauce->getLabel() ?>">
+                                </td>
+                                <td>
+                                    <?= $sauce->getLabel() ?>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </table>
+                    <table>
+                        <tr>
+                            <td><button onclick="goBack(4)"><- Zurück</button></td>
+                            <td></td>
+                            <td><button onclick="goNext(4)">Weiter -></button></td>
+                        </tr>
+                    </table>
+                </div>
+                <?php /* <!-- Sauce -->
                 <div class="form4" id="slide4">
                     <p>Wählen sie Ihre Sauce:</p>
                     <?php foreach ($sauceArray as $sauce) { ?>
@@ -64,8 +156,31 @@
                     <button onclick="goBack(4)">
                         <- Zurück</button>
                             <button onclick="goNext(4)">Weiter -></button>
-                </div>
+                </div> */; ?>
                 <!-- Vegetables (checkbox) -->
+                <div class="form5" id="slide5">
+                    <table><tr><th colspan="2">Wählen Sie bitte das Gemüse aus</th></tr></table>
+                    <table>
+                        <?php foreach ($vegetablesArray as $vegetable) { ?>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="vegetables" name="vegetables" value="<?= $vegetable->getPK() ?>" id="<?= $vegetable->getLabel() ?>">
+                                </td>
+                                <td>
+                                    <?= $vegetable->getLabel() ?>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </table>
+                    <table>
+                        <tr>
+                            <td><button onclick="goBack(5)"><- Zurück</button></td>
+                            <td></td>
+                            <td><button onclick="goNext(5)">Fertig -></button></td>
+                        </tr>
+                    </table>
+                </div>
+                <?php /* <!-- Vegetables (checkbox) -->
                 <div class="form5" id="slide5">
                     <p>Wählen sie Ihr Gemüse:</p>
                     <?php foreach ($vegetablesArray as $vegetable) { ?>
@@ -76,8 +191,44 @@
                     <button onclick="goBack(5)">
                         <- Zurück</button>
                             <button onclick="goNext(5)">Fertig -></button>
-                </div>
+                </div> */; ?>
+
                 <!-- See order -->
+                <div class="form6" id="slide6">
+                    <form class="final" action="add_order" method="POST">
+                        <table><tr><th>Ihre Auswahl:</th></tr></table>
+                        <table>
+                            <tr>
+                                <td>Brot:</td>
+                                <td><input type="text" name="bread" id="bread" readonly></td>
+                            </tr>
+                            <tr>
+                                <td>Käse:</td>
+                                <td><input type="text" name="cheese" id="cheese" readonly></td>
+                            </tr>
+                            <tr>
+                                <td>Fleisch:</td>
+                                <td><input type="text" name="meat" id="meat" readonly></td>
+                            </tr>
+                            <tr>
+                                <td>Sauce:</td>
+                                <td><input type="text" name="sauce" id="sauce" readonly></td>
+                            </tr>
+                            <tr>
+                                <td>Gemüse:</td>
+                                <td><input type="text" name="vegetables" id="vegetables" readonly></td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td><button type="button" onclick="goBack(6)"><- Zurück</button></td>
+                            <td></td>
+                                <td><button type="submit">Bestellen -></button></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <?php /* <!-- See order -->
                 <div class="form6" id="slide6">
                     <p>Ihre Auswahl:</p>
 
@@ -97,7 +248,7 @@
 
                     <button onclick="goBack(6)">
                         <- Zurück</button>
-                </div>
+                </div> */; ?>
             </div>
             <div class="footer">
                 <?php include 'app/Controllers/inc/footer.inc.php'; ?>
