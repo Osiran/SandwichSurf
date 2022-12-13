@@ -6,6 +6,6 @@
 -- Use Database
 USE DATABASE `sandwichsurf`;
 INSERT INTO `orders`
-(`fk_bread`,`fk_cheese`,`fk_meat`,`fk_sauce`,`fk_orders_vegetables`,`timestamp`)
+(`fk_bread`,`fk_cheese`,`fk_meat`,`fk_sauce`,`fk_orders_vegetables`)
 values
-('','','','','','');
+('','','','','');
