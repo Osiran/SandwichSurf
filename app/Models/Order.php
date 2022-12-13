@@ -20,7 +20,7 @@ class Order {
     // returns all orders as array of class objects
     static function getAll() {
         $db = db();
-        $statement = $db->prepare('SELECT pk_orders FROM orders ORDER BY timestamp DESC');
+        $statement = $db->prepare('SELECT pk_orders FROM orders');
         $statement->execute();
 
         $orders = [];
