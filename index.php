@@ -11,7 +11,6 @@ $routes = [
 	'loginControl' => 'Controller@loginControl',
 	'ingredient' => 'Controller@ingredient',
 	'overview' => 'Controller@overview', 
-	'test' => 'Controller@test',
 ];
 
 $router = new Router($routes);
