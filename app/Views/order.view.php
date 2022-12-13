@@ -44,19 +44,7 @@
                         </tr>
                     </table>
                 </div>
-                <?php /* ?>
-                <!-- Bread -->
-                <div class="form1" id="slide1">
-                    <p>Wählen sie Ihr Brot:</p>
-                    <?php foreach ($breadArray as $bread) { ?>
-                        <input type="radio" class="bread" name="bread" onclick="checkValue()" value="<?= $bread->getPK() ?>" id="<?= $bread->getLabel() ?>">
-                        <label id="bread<?= $bread->getPK() ?>" for="<?= $bread->getLabel() ?>"><?= $bread->getLabel() ?></label><br>
-                    <?php } ?>
-                    <br><br>
-                    <button onclick="goNext(1)" disabled>Weiter -></button>
-                </div> <?php */; ?>
                 <!-- Cheese -->
-
                 <div class="form2" id="slide2">
                     <table>
                         <tr>
@@ -85,18 +73,6 @@
                         </tr>
                     </table>
                 </div>
-                <?php /* <!-- Cheese -->
-                <div class="form2" id="slide2">
-                    <p>Wählen sie Ihren Käse:</p>
-                    <?php foreach ($cheeseArray as $cheese) { ?>
-                        <input type="radio" class="cheese" name="cheese" value="<?= $cheese->getPK() ?>" id="<?= $cheese->getLabel() ?>">
-                        <label id="cheese<?= $cheese->getPK() ?>" for="<?= $cheese->getLabel() ?>"><?= $cheese->getLabel() ?></label>
-                    <?php } ?>
-                    <br><br>
-                    <button onclick="goBack(2)">
-                        <- Zurück</button>
-                            <button onclick="goNext(2)">Weiter -></button>
-                </div> */; ?>
 
                 <!-- Meat -->
                 <div class="form3" id="slide3">
@@ -127,18 +103,6 @@
                         </tr>
                     </table>
                 </div>
-                <?php /* <!-- Meat -->
-                <div class="form3" id="slide3">
-                    <p>Wählen sie Ihre Fleischsorte:</p>
-                    <?php foreach ($meatArray as $meat) { ?>
-                        <input type="radio" class="meat" name="meat" value="<?= $meat->getPK() ?>" id="<?= $meat->getLabel() ?>">
-                        <label id="meat<?= $meat->getPK() ?>" for="<?= $meat->getLabel() ?>"><?= $meat->getLabel() ?></label>
-                    <?php } ?>
-                    <br><br>
-                    <button onclick="goBack(3)">
-                        <- Zurück</button>
-                            <button onclick="goNext(3)">Weiter -></button>
-                </div> */; ?>
 
                 <!-- Sauce -->
                 <div class="form4" id="slide4">
@@ -169,18 +133,7 @@
                         </tr>
                     </table>
                 </div>
-                <?php /* <!-- Sauce -->
-                <div class="form4" id="slide4">
-                    <p>Wählen sie Ihre Sauce:</p>
-                    <?php foreach ($sauceArray as $sauce) { ?>
-                        <input type="radio" class="sauce" name="sauce" value="<?= $sauce->getPK() ?>" id="<?= $sauce->getLabel() ?>">
-                        <label id="sauce<?= $sauce->getPK() ?>" for="<?= $sauce->getLabel() ?>"><?= $sauce->getLabel() ?></label>
-                    <?php } ?>
-                    <br><br>
-                    <button onclick="goBack(4)">
-                        <- Zurück</button>
-                            <button onclick="goNext(4)">Weiter -></button>
-                </div> */; ?>
+
                 <!-- Vegetables (checkbox) -->
                 <div class="form5" id="slide5">
                     <table>
@@ -210,18 +163,6 @@
                         </tr>
                     </table>
                 </div>
-                <?php /* <!-- Vegetables (checkbox) -->
-                <div class="form5" id="slide5">
-                    <p>Wählen sie Ihr Gemüse:</p>
-                    <?php foreach ($vegetablesArray as $vegetable) { ?>
-                        <input type="checkbox" class="vegetables" name="vegetables" value="<?= $vegetable->getPK() ?>" id="<?= $vegetable->getLabel() ?>">
-                        <label for="<?= $vegetable->getLabel() ?>"><?= $vegetable->getLabel() ?></label>
-                    <?php } ?>
-                    <br><br>
-                    <button onclick="goBack(5)">
-                        <- Zurück</button>
-                            <button onclick="goNext(5)">Fertig -></button>
-                </div> */; ?>
 
                 <!-- See order -->
                 <div class="form6" id="slide6">
@@ -264,27 +205,6 @@
                         </table>
                     </form>
                 </div>
-                <?php /* <!-- See order -->
-                <div class="form6" id="slide6">
-                    <p>Ihre Auswahl:</p>
-
-                    <form class="final" action="add_order" method="POST">
-                        <label for="bread">Brot: <span id="breadname"></span></label><br>
-                        <input type="text" id="bread" name="bread"><br>
-                        <label for="cheese">Käse: <span id="cheesename"></span></label><br>
-                        <input type="text" id="cheese" name="cheese"><br>
-                        <label for="meat">Fleisch: <span id="meatname"></span></label><br>
-                        <input type="text" id="meat" name="meat"><br>
-                        <label for="sauce">Sauce: <span id="saucename"></span></label><br>
-                        <input type="text" id="sauce" name="sauce"><br>
-                        <label for="vegetables">Gemüse:</label><br>
-                        <input type="text" id="vegetables" name="vegetables"><br><br>
-                        <button type="submit">Bestellen -></button>
-                    </form>
-
-                    <button onclick="goBack(6)">
-                        <- Zurück</button>
-                </div> */; ?>
             </div>
             <div class="footer">
                 <?php include 'app/Controllers/inc/footer.inc.php'; ?>

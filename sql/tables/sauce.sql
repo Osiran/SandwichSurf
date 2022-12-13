@@ -11,4 +11,4 @@ values
 ('Cocktail','public/img/icon.png'),
 ('Ketchup','public/img/icon.png'),
 ('Mayonnaise','public/img/icon.png'),
-('Mustard','public/img/icon.png');
+('Senf','public/img/icon.png');

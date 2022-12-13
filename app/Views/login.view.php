@@ -20,7 +20,7 @@
                 <form action="loginControl" method="POST">
                     <table>
                         <tr>
-                            <td><label for="name">Name:</label></td>
+                            <td><label for="name">ID:</label></td>
                             <td><input type="text" name="pk_staffId" id="pk_staffId" required></td>
                         </tr>
                         <tr>

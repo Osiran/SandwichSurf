@@ -57,7 +57,6 @@ CREATE TABLE `orders`(
     fk_meat int,
     fk_sauce int,
     fk_orders_vegetables int,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (pk_orders)
 );
 

@@ -76,14 +76,6 @@ class Controller
 		require 'app/Views/ingredient.view.php';
 	}
 
-	public function test(){
-		require 'app/Models/Order.php';
-
-		$orderArray = Order::getAll();
-
-		require 'app/Views/test.php';
-	}
-
 	public function add_order(){
 		require 'app/Models/Order.php';
 
