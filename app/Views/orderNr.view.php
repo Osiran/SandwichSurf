@@ -15,7 +15,7 @@
         <div class="main">
             <div class="text">
                 <p>Danke für Ihre Bestellung.</p>
-                <p>Ihre Bestellnummer lautet:</p>
+                <p>Ihre Bestellnummer lautet: <?= $_GET['id'] ?></p>
             </div>
             <div class="js">
                 <!-- Hier die JS-Datei einfügen -->

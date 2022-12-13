@@ -33,12 +33,12 @@ class Order {
     // inserts a dataset into the database and returns instance of Order
     static function create($bread, $meat, $cheese, $sauce) {
         $db = db();
-        $statement = $db->prepare('INSERT INTO orders (pk_bread, pk_meat, pk_cheese, pk_sauce) VALUES 
-        (:pk_bread, :pk_meat, :pk_cheese, :pk_sauce, :timestamp)');
-        $statement->bindParam(':pk_bread', $bread);
-        $statement->bindParam(':pk_meat', $meat);
-        $statement->bindParam(':pk_cheese', $cheese);
-        $statement->bindParam(':pk_sauce', $sauce);
+        $statement = $db->prepare('INSERT INTO orders (fk_bread, fk_meat, fk_cheese, fk_sauce) VALUES 
+        (:fk_bread, :fk_meat, :fk_cheese, :fk_sauce)');
+        $statement->bindParam(':fk_bread', $bread);
+        $statement->bindParam(':fk_meat', $meat);
+        $statement->bindParam(':fk_cheese', $cheese);
+        $statement->bindParam(':fk_sauce', $sauce);
 
         if ($statement->execute()) return new Order($db->lastInsertId());
         return null;
@@ -51,6 +51,12 @@ class Order {
         $statement->bindParam(':id', $this->pk_orders);
         $statement->execute();
         $result = $statement->fetch();
+
+        require 'app/Models/Bread.php';
+        require 'app/Models/Meat.php';
+        require 'app/Models/Cheese.php';
+        require 'app/Models/Sauce.php';
+
         $this->bread = new Bread($result['fk_bread']);
         $this->meat = new Meat($result['fk_meat']);
         $this->cheese = new Cheese($result['fk_cheese']);
@@ -59,7 +65,7 @@ class Order {
 
     function setVegetables() {
         $this->vegetables = [];
-        $statement = $this->db->prepare('SELECT fk_vegetables FROM orders_vegetables WHERE fk_orders = :id ORDER BY label ASC');
+        $statement = $this->db->prepare('SELECT fk_vegetables FROM orders_vegetables WHERE fk_orders = :id');
         $statement->bindParam(':id', $this->pk_orders);
         $statement->execute();
 
@@ -84,6 +90,10 @@ class Order {
     }
 
     // get methods
+
+    function getPK() {
+        return $this->pk_orders;
+    }
 
     function getBread() {
         return $this->bread;

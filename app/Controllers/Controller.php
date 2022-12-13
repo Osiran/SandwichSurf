@@ -87,7 +87,10 @@ class Controller
 	public function add_order(){
 		require 'app/Models/Order.php';
 
-		$order = Order::create($_POST['bread'], $_POST['meat'], $_POST['cheese'], $_POST['sauce'], $_POST['vegetables']);
+		$order = Order::create($_POST['bread'], $_POST['meat'], $_POST['cheese'], $_POST['sauce']);
+		if ($order) {
+			header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . '/orderNr?id=' . $order->getPK());
+		}
 	
 	}
 
