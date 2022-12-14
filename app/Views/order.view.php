@@ -33,7 +33,7 @@
                                     <input type="radio" class="bread" name="bread" onclick="checkValue()" value="<?= $bread->getLabel() ?>" id="<?= $bread->getPK() ?>">
                                 </td>
                                 <td>
-                                    <?= $bread->getLabel() ?>
+                                    <label for="<?= $bread->getPK() ?>"><?= $bread->getLabel() ?></label>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -58,7 +58,7 @@
                                     <input type="radio" class="cheese" name="cheese" value="<?= $cheese->getLabel() ?>" id="<?= $cheese->getPK() ?>">
                                 </td>
                                 <td>
-                                    <?= $cheese->getLabel() ?>
+                                    <label for="<?= $cheese->getPK() ?>"><?= $cheese->getLabel() ?></label>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -88,7 +88,7 @@
                                     <input type="radio" class="meat" name="meat" value="<?= $meat->getLabel() ?>" id="<?= $meat->getPK() ?>">
                                 </td>
                                 <td>
-                                    <?= $meat->getLabel() ?>
+                                    <label for="<?= $meat->getPK() ?>"><?= $meat->getLabel() ?></label>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -118,7 +118,7 @@
                                     <input type="radio" class="sauce" name="sauce" value="<?= $sauce->getLabel() ?>" id="<?= $sauce->getPK() ?>">
                                 </td>
                                 <td>
-                                    <?= $sauce->getLabel() ?>
+                                    <label for="<?= $sauce->getPK() ?>"><?= $sauce->getLabel() ?></label>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -148,7 +148,7 @@
                                     <input type="checkbox" class="vegetables" name="vegetables" value="<?= $vegetable->getLabel() ?>" id="<?= $vegetable->getPK() ?>">
                                 </td>
                                 <td>
-                                    <?= $vegetable->getLabel() ?>
+                                    <label for="<?= $vegetable->getPK() ?>"><?= $vegetable->getLabel() ?></label>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -175,23 +175,38 @@
                         <table>
                             <tr>
                                 <td>Brot:</td>
-                                <td><input type="text" name="bread" id="bread" readonly></td>
+                                <td>
+                                    <input type="text" name="" id="breadName" readonly>
+                                    <input type="number" name="bread" id="breadId" style="display: none;">
+                                </td>
                             </tr>
                             <tr>
                                 <td>Käse:</td>
-                                <td><input type="text" name="cheese" id="cheese" readonly></td>
+                                <td>
+                                    <input type="text" name="" id="cheeseName" readonly>
+                                    <input type="number" name="cheese" id="cheeseId" style="display: none;">
+                                </td>
                             </tr>
                             <tr>
                                 <td>Fleisch:</td>
-                                <td><input type="text" name="meat" id="meat" readonly></td>
+                                <td>
+                                    <input type="text" name="" id="meatName" readonly>
+                                    <input type="number" name="meat" id="meatId" style="display: none;">
+                                </td>
                             </tr>
                             <tr>
                                 <td>Sauce:</td>
-                                <td><input type="text" name="sauce" id="sauce" readonly></td>
+                                <td>
+                                    <input type="text" name="" id="sauceName" readonly>
+                                    <input type="number" name="sauce" id="sauceId" style="display: none;">
+                                </td>
                             </tr>
                             <tr>
                                 <td>Gemüse:</td>
-                                <td><input type="text" name="vegetables" id="vegetables" readonly></td>
+                                <td>
+                                    <input type="text" name="" id="vegetablesName" readonly>
+                                    <input type="number" name="vegetables" id="vegetablesId" style="display: none;">
+                                </td>
                             </tr>
                         </table>
                         <table>

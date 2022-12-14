@@ -4,7 +4,7 @@
 -- Password: ""
 
 -- Use Database
-USE DATABASE `sandwichsurf`;
+USE `sandwichsurf`;
 INSERT INTO `orders`
 (`fk_bread`,`fk_cheese`,`fk_meat`,`fk_sauce`,`fk_orders_vegetables`)
 values
