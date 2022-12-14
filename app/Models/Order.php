@@ -52,10 +52,10 @@ class Order {
         $statement->execute();
         $result = $statement->fetch();
 
-        require 'app/Models/Bread.php';
-        require 'app/Models/Meat.php';
-        require 'app/Models/Cheese.php';
-        require 'app/Models/Sauce.php';
+        require_once 'app/Models/Bread.php';
+        require_once 'app/Models/Meat.php';
+        require_once 'app/Models/Cheese.php';
+        require_once 'app/Models/Sauce.php';
 
         $this->bread = new Bread($result['fk_bread']);
         $this->meat = new Meat($result['fk_meat']);

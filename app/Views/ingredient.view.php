@@ -17,7 +17,7 @@
                     <?php for($i=0; $i<count($breadArray); $i++): ?>
                         <tr>
                             <td><?= $breadArray[$i]->getLabel(); ?></td>
-                            <td><?= $breadArray[$i]->getImg(); ?></td>
+                            <td><img src="<?= $breadArray[$i]->getImg(); ?>" alt="<?= $breadArray[$i]->getLabel() ?>"></td>
                         </tr>
                     <?php endfor; ?>
                 </table>
@@ -26,7 +26,7 @@
                     <?php for($i=0; $i<count($cheeseArray); $i++): ?>
                         <tr>
                             <td><?= $cheeseArray[$i]->getLabel(); ?></td>
-                            <td><?= $cheeseArray[$i]->getImg(); ?></td>
+                            <td><img src="<?= $cheeseArray[$i]->getImg(); ?>" alt="<?= $breadArray[$i]->getLabel() ?>"></td>
                         </tr>
                     <?php endfor; ?>
                 </table>
@@ -35,7 +35,7 @@
                     <?php for($i=0; $i<count($meatArray); $i++): ?>
                         <tr>
                             <td><?= $meatArray[$i]->getLabel(); ?></td>
-                            <td><?= $meatArray[$i]->getImg(); ?></td>
+                            <td><img src="<?= $meatArray[$i]->getImg(); ?>" alt="<?= $breadArray[$i]->getLabel() ?>"></td>
                         </tr>
                     <?php endfor; ?>
                 </table>
@@ -44,7 +44,7 @@
                     <?php for($i=0; $i<count($sauceArray); $i++): ?>
                         <tr>
                             <td><?= $sauceArray[$i]->getLabel(); ?></td>
-                            <td><?= $sauceArray[$i]->getImg(); ?></td>
+                            <td><img src="<?= $sauceArray[$i]->getImg(); ?>" alt="<?= $breadArray[$i]->getLabel() ?>"></td>
                         </tr>
                     <?php endfor; ?>
                 </table>
@@ -53,7 +53,7 @@
                     <?php for($i=0; $i<count($vegetablesArray); $i++): ?>
                         <tr>
                             <td><?= $vegetablesArray[$i]->getLabel(); ?></td>
-                            <td><?= $vegetablesArray[$i]->getImg(); ?></td>
+                            <td><img src="<?= $vegetablesArray[$i]->getImg(); ?>" alt="<?= $breadArray[$i]->getLabel() ?>"></td>
                         </tr>
                     <?php endfor; ?>
                 </table>

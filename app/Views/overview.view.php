@@ -18,7 +18,7 @@
             </div>
             <div class="js">
                 <?php foreach($orderArray as $order){ ?>
-                    <p><?= $order->getLabel() ?></p>
+                    <p><?= $order->getPK() ?></p>
                 <?php } ?>
                 <table><tr><th><a href="login"><button type="button">Zurück zum Login</button></a></th></tr></table>
             </div>
