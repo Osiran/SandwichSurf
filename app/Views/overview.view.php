@@ -23,6 +23,7 @@
                     <p><strong>Käse</strong></p>
                     <p><strong>Fleisch</strong></p>
                     <p><strong>Sauce</strong></p>
+                    <p><strong>Gemüse</strong></p>
                 </div>
                 <?php foreach($orderArray as $order){ ?>
                     <div class="orders">
@@ -31,6 +32,11 @@
                         <p><?= $order->getCheese()->getLabel() ?></p>
                         <p><?= $order->getMeat()->getLabel() ?></p>
                         <p><?= $order->getSauce()->getLabel() ?></p>
+                        <ul>
+                            <?php foreach ($order->getVegetables() as $v) { ?>
+                                <li><?= $v->getLabel() ?></li>
+                            <?php } ?>
+                        </ul>
                     </div>
                 <?php } ?>
                 <table><tr><th><a href="login"><button type="button">Zurück zum Login</button></a></th></tr></table>

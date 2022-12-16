@@ -84,7 +84,7 @@ img {
 .orders {
   margin: auto;
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  width: 50%;
+  grid-template-columns: repeat(6, 1fr);
+  width: 60%;
   border-bottom: 1px solid lightgray;
 }

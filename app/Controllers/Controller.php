@@ -81,6 +81,7 @@ class Controller
 
 		$order = Order::create($_POST['bread'], $_POST['meat'], $_POST['cheese'], $_POST['sauce']);
 		if ($order) {
+			require 'app/Models/Vegetables.php';
 			foreach ($_POST['vegetables'] as $key => $value) {
 				$order->addVegetables(new Vegetables($value));
 			}

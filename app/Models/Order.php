@@ -80,6 +80,7 @@ class Order {
         $statement->execute();
 
         if ($statement->rowCount() > 0) {
+            require_once 'app/Models/Vegetables.php';
             foreach ($statement->fetchAll() as $v) {
                 array_push($this->vegetables, new Vegetables($v['fk_vegetables']));
             }
