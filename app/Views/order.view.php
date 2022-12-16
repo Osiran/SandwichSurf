@@ -205,7 +205,7 @@
                                 <td>Gemüse:</td>
                                 <td>
                                     <input type="text" name="" id="vegetablesName" readonly>
-                                    <input type="number" name="vegetables" id="vegetablesId" style="display: none;">
+                                    <input type="text" name="vegetables[]" id="vegetablesId" style="display: none;">
                                 </td>
                             </tr>
                         </table>

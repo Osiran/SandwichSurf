@@ -15,17 +15,14 @@
         <div class="main">
             <div class="text">
                 <p>Danke für Ihre Bestellung.</p>
-                <p>Ihre Bestellnummer lautet: <?= $_GET['id'] ?></p>
-            </div>
-            <div class="js">
-                <!-- Hier die JS-Datei einfügen -->
+                <p>Ihre Bestellnummer lautet:</p>
+                <p><strong><?= $_GET['id'] ?></strong></p>
+                <p>Bitte weisen Sie diese Nummer bei der Abholung vor. Vielen Dank!</p>
             </div>
         </div>
         <div class="footer">
             <?php include 'app/Controllers/inc/footer.inc.php'; ?>
         </div>
     </div>
-
-    <script></script>
 </body>
 </html>
