@@ -80,3 +80,11 @@ body .container .footer .createdBy {
 img {
   height: 50px;
 }
+
+.orders {
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  width: 50%;
+  border-bottom: 1px solid lightgray;
+}

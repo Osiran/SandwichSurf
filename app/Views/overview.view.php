@@ -18,7 +18,13 @@
             </div>
             <div class="js">
                 <?php foreach($orderArray as $order){ ?>
-                    <p><?= $order->getPK() ?></p>
+                    <div class="orders">
+                        <p><?= $order->getPK() ?></p>
+                        <p><?= $order->getBread()->getLabel() ?></p>
+                        <p><?= $order->getCheese()->getLabel() ?></p>
+                        <p><?= $order->getMeat()->getLabel() ?></p>
+                        <p><?= $order->getSauce()->getLabel() ?></p>
+                    </div>
                 <?php } ?>
                 <table><tr><th><a href="login"><button type="button">Zurück zum Login</button></a></th></tr></table>
             </div>
