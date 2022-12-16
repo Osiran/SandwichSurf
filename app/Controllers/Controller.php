@@ -81,6 +81,7 @@ class Controller
 
 		$order = Order::create($_POST['bread'], $_POST['meat'], $_POST['cheese'], $_POST['sauce']);
 		if ($order) {
+			
 			header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . '/orderNr?id=' . $order->getPK());
 		}
 	
