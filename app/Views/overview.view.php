@@ -17,6 +17,13 @@
                 <p>Hier sind alle Bestellungen im Überblick</p>
             </div>
             <div class="js">
+                <div class="orders">
+                    <p><strong>Bestellnummer</strong></p>
+                    <p><strong>Brot</strong></p>
+                    <p><strong>Käse</strong></p>
+                    <p><strong>Fleisch</strong></p>
+                    <p><strong>Sauce</strong></p>
+                </div>
                 <?php foreach($orderArray as $order){ ?>
                     <div class="orders">
                         <p><?= $order->getPK() ?></p>
