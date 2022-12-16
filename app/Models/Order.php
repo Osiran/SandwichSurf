@@ -44,6 +44,16 @@ class Order {
         return null;
     }
 
+    static function createForVeg($vegetables){
+        $db = db();
+        $statement = $db->prepare('INSERT INTO orders (fk_vegetables) VALUES 
+        (:fk_vegetables)');
+        $statement->bindParam(':fk_vegetables', $vegetables);
+
+        if ($statement->execute()) return new Order($db->lastInsertId());
+        return null;
+    }
+
     // set data
 
     function setData() {

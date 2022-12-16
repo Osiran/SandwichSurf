@@ -81,7 +81,9 @@ class Controller
 
 		$order = Order::create($_POST['bread'], $_POST['meat'], $_POST['cheese'], $_POST['sauce']);
 		if ($order) {
-			
+			foreach ($_POST['vegetables'] as $key => $value) {
+				$order->addVegetables(new Vegetables($value));
+			}
 			header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . '/orderNr?id=' . $order->getPK());
 		}
 	
