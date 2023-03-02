@@ -1,27 +1,28 @@
 body {
-  margin: 0;
+  
   background-color: rgba(46, 111, 241, 0.1294117647);
+  padding: 0 100px;
 }
-body .container {
+/*body .container {
   display: grid;
   grid-template-rows: repeat(3, auto);
   grid-template-columns: 100%;
   grid-template-areas: "header" "main" "footer";
-}
-body .container .header {
+}*/
+.header {
   grid-area: header;
 }
-body .container .header .border1 {
+.border1 {
   border-top: 5px solid #2e6ff1;
   height: 5px;
   background-color: #41f010;
   border-bottom: 5px solid #2e6ff1;
 }
-body .container .header .border2 {
+.border2 {
   height: 5px;
   background-color: #41f010;
 }
-body .container .header h1 {
+h1 {
   text-align: center;
   font-size: 4em;
   font-family: sans-serif;
@@ -30,48 +31,64 @@ body .container .header h1 {
   padding: 50px;
   margin: 0;
 }
-body .container .main .text {
+p {
   text-align: center;
-}
-body .container .main .text p {
   font-size: 1.3em;
   font-family: sans-serif;
 }
-body .container .main .buttons {
+button {
   text-align: center;
-}
-body .container .main .buttons button {
   font-size: 1.1em;
   border-radius: 12px;
   border: 1px solid #2e6ff1;
   background-color: #41f010;
 }
-body .container .main .js table {
-  margin: auto;
+a {
+  font-family: sans-serif;
+  cursor: default;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-decoration-line: none;
+  font-size: 1.1em;
+  border-radius: 12px;
+  border: 1px solid #2e6ff1;
+  background-color: #41f010;
 }
-body .container .footer {
-  width: 100%;
+div.js  {
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+.footer {
   text-align: center;
-  grid-area: footer;
+  margin-top: 100px;
+  /*grid-area: footer;*/
   display: grid;
-  grid-template-columns: repeat(3, 33.33%);
+  grid-template-columns: auto auto auto;
   grid-template-areas: "addresse  open  createdBy";
-  position: fixed;
-  left: 0;
-  bottom: 0;
 }
-body .container .footer p {
+.footer p {
   font-size: 1em;
 }
-body .container .footer .addresse {
+.addresse {
   grid-area: addresse;
 }
-body .container .footer .open {
+.open {
   grid-area: open;
 }
-body .container .footer .createdBy {
+.createdBy {
   grid-area: createdBy;
 }
+
+
+
+
+
 
 .error {
   color: red;
@@ -80,11 +97,12 @@ body .container .footer .createdBy {
 img {
   height: 50px;
 }
-
-.orders {
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  width: 60%;
-  border-bottom: 1px solid lightgray;
-}
+table{
+  border-collapse:collapse;
+  border:1px solid #000000;
+  font-family:sans-serif;
+  }
+  
+  td, th{
+  border:1px solid #000000;
+  }
