@@ -1,8 +1,7 @@
 <?php
 
-class Meat {
-    private $pk_meat;
+class Vegetable {
+    private $pk_vegetables;
     private $label;
     private $img;
-
 }
