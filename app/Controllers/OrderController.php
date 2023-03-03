@@ -43,7 +43,7 @@ class OrderController {
         VALUES ($bread_id,$meat_id, $cheese_id, $sauce_id)");
 
 		foreach ($_POST['vegetables'] as $key => $value) {
-            saveData("INSERT INTO orders_vegetables (fk_orders, fk_vegetables) VALUES ($orderId, $key)");
+            saveData("INSERT INTO orders_vegetables (fk_orders, fk_vegetables) VALUES ($orderId, $value)");
             //$vegetables = getAll('SELECT fk_vegetables FROM orders_vegetables WHERE fk_orders = '$id'');
 		}
 		header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . '/orderNr?id=' . $orderId);
