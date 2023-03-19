@@ -9,21 +9,35 @@ function connectDatabase()
     }
 }
 
-function getAll($sql){
+function getAll($sql, $parms){
 
-    $db = db();
-    $statement = $db->prepare($sql);
-    $statement->execute();
+    $conn = db();
+    $statement = $conn->prepare($sql);
+
+    if(isset($parms)){
+        $statement->execute($parms);
+    }else{
+        $statement->execute();
+    }
+    
     $res = $statement->fetchAll(PDO::FETCH_CLASS);
     return $res;
 }
 
-function saveData($sql){
+function saveData($sql, $parms){
 
-    $db = db();
-    $statement = $db->prepare($sql);
-    $statement->execute();
-    return $db->lastInsertId();
+    $conn = db();
+    $statement = $conn->prepare($sql);
+    
+    /*$size = count($parms);
+
+    for($i =0 ; $i< $size; $i++){
+        $statement->bindParam($i+1, $parms[$i]);
+    }*/
+    
+    $statement->execute($parms);
+
+    return $conn->lastInsertId();
 
 
 }

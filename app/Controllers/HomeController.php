@@ -13,7 +13,7 @@ class HomeController
 	}
 
 	public function credential($id, $password) {
-        $staff = getAll("SELECT * FROM staff WHERE pk_staffId = $id");
+        $staff = getAll("SELECT * FROM staff WHERE pk_staffId = ?", array($id));
 		
         $result = $staff[0];
         if ($result) {

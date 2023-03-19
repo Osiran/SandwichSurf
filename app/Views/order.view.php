@@ -5,7 +5,7 @@
 
 <p>Wie dürfen wir Ihr Sandwich zubereiten?</p>
 
-<form class="final" action="add_order" method="POST">
+
 <!-- Bread -->
 <div id="slide1">
         <h2>Wählen Sie bitte ein Brot aus</h2>
@@ -51,6 +51,7 @@
         <button type="button" onclick="goNext(4, 'sauce')">Weiter -></button>
 </div>
 <!-- Vegetables (checkbox) -->
+<form class="final" action="add_order" method="POST">
 <div id="slide5">
         <h2>Wählen Sie bitte das Gemüse aus</h2>
         <?php foreach ($vegetablesArray as $vegetable) { ?>
