@@ -9,12 +9,12 @@ class OrderController {
         join meat as m on o.fk_meat = m.pk_meat
         join cheese as c on o.fk_cheese = c.pk_cheese
         join bread as b on o.fk_bread = b.pk_bread
-        join sauce as s on o.fk_sauce = s.pk_sauce');
+        join sauce as s on o.fk_sauce = s.pk_sauce', null);
         for($i = 0; $i < count($orderArray); $i++){
             $orderid= $orderArray[$i]->pk_orders;
             $orderArray[$i]->vegetables = getAll( "SELECT v.label as label from orders_vegetables as ov
             join vegetables as v on v.pk_vegetables = ov.fk_vegetables
-            where ov.fk_orders = $orderid");
+            where ov.fk_orders = ?;", array($orderid));
         }
         require 'app/Views/overview.view.php';
     }
@@ -22,11 +22,11 @@ class OrderController {
 
     //GET Request for http://localhost/sandwichsurf/orders
 	public function createGET(){
-        $breadArray= getAll('SELECT * FROM bread ORDER BY label ASC');
-		$cheeseArray = getAll('SELECT * FROM cheese ORDER BY label ASC');
-		$meatArray = getAll('SELECT * FROM meat ORDER BY label ASC');
-		$sauceArray = getAll('SELECT * FROM sauce ORDER BY label ASC');
-		$vegetablesArray = getAll('SELECT * FROM vegetables ORDER BY label ASC');
+        $breadArray= getAll('SELECT * FROM bread ORDER BY label ASC', null);
+		$cheeseArray = getAll('SELECT * FROM cheese ORDER BY label ASC', null);
+		$meatArray = getAll('SELECT * FROM meat ORDER BY label ASC', null);
+		$sauceArray = getAll('SELECT * FROM sauce ORDER BY label ASC', null);
+		$vegetablesArray = getAll('SELECT * FROM vegetables ORDER BY label ASC', null);
 
 		require 'app/Views/order.view.php';
 	}
@@ -39,11 +39,11 @@ class OrderController {
         $meat_id = $_POST['meat'];
         $cheese_id = $_POST['cheese'];
         $sauce_id = $_POST['sauce'];
-        $orderId = saveData("INSERT INTO orders (fk_bread, fk_meat, fk_cheese, fk_sauce)
-        VALUES ($bread_id,$meat_id, $cheese_id, $sauce_id)");
+        
+        $orderId = saveData("INSERT INTO orders (fk_bread, fk_meat, fk_cheese, fk_sauce) VALUES (?, ?, ?, ?)", array($bread_id, $meat_id, $cheese_id, $sauce_id));
 
 		foreach ($_POST['vegetables'] as $key => $value) {
-            saveData("INSERT INTO orders_vegetables (fk_orders, fk_vegetables) VALUES ($orderId, $value)");
+            saveData("INSERT INTO orders_vegetables (fk_orders, fk_vegetables) VALUES (?, ?)", array($orderId, $value));
             //$vegetables = getAll('SELECT fk_vegetables FROM orders_vegetables WHERE fk_orders = '$id'');
 		}
 		header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . '/orderNr?id=' . $orderId);
