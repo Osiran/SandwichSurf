@@ -19,7 +19,7 @@ function goNext(index, ingredient){
     if(index == 5){
         let vegNames =[];
         document.querySelectorAll('input[name="vegetables[]"]:checked').forEach((element)=>{
-            vegNames.push(element.id);
+            vegNames.push(element.dataset.label);
         });
         document.getElementById("vegetablesName").value = vegNames;
 

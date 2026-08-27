@@ -55,8 +55,8 @@
 <div id="slide5">
         <h2>Wählen Sie bitte das Gemüse aus</h2>
         <?php foreach ($vegetablesArray as $vegetable) { ?>
-                    <input type="checkbox" name="vegetables[]" value="<?= $vegetable->pk_vegetables ?>" id="<?= $vegetable->label ?>">
-                    <label for="<?= $vegetable->pk_vegetable ?>"><?= $vegetable->label ?></label> <br>
+                    <input type="checkbox" name="vegetables[]" value="<?= $vegetable->pk_vegetables ?>" id="veg_<?= $vegetable->pk_vegetables ?>" data-label="<?= $vegetable->label ?>">
+                    <label for="veg_<?= $vegetable->pk_vegetables ?>"><?= $vegetable->label ?></label> <br>
         <?php } ?>
         <button type="button" onclick="goBack(5)"><- Zurück</button>
         <button  type="button" onclick="goNext(5, 'vegetables')">Fertig -></button>

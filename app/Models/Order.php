@@ -1,5 +1,5 @@
 <?php
-class Order(){
+class Order {
 
     private $pk_orders;
     private $bread;
