@@ -35,18 +35,28 @@ class OrderController {
     // inserts a dataset into the database and returns instance of Order
     static function createPOST() {
 
-        $bread_id = $_POST['bread'];
-        $meat_id = $_POST['meat'];
-        $cheese_id = $_POST['cheese'];
-        $sauce_id = $_POST['sauce'];
-        
+        $bread_id = $_POST['bread'] ?? '';
+        $meat_id = $_POST['meat'] ?? '';
+        $cheese_id = $_POST['cheese'] ?? '';
+        $sauce_id = $_POST['sauce'] ?? '';
+
+        // A sandwich needs its four base ingredients. Without this guard a partial
+        // POST (or a manual request) inserted a broken order with NULL foreign keys.
+        if ($bread_id === '' || $meat_id === '' || $cheese_id === '' || $sauce_id === '') {
+            header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . '/orders');
+            exit;
+        }
+
         $orderId = saveData("INSERT INTO orders (fk_bread, fk_meat, fk_cheese, fk_sauce) VALUES (?, ?, ?, ?)", array($bread_id, $meat_id, $cheese_id, $sauce_id));
 
-		foreach ($_POST['vegetables'] as $key => $value) {
+        // Vegetables are optional — a sandwich with none must not crash. The old
+        // code did `foreach ($_POST['vegetables'] ...)` which raised a warning and
+        // aborted the request when no checkbox was ticked.
+        foreach (($_POST['vegetables'] ?? []) as $key => $value) {
             saveData("INSERT INTO orders_vegetables (fk_orders, fk_vegetables) VALUES (?, ?)", array($orderId, $value));
-            //$vegetables = getAll('SELECT fk_vegetables FROM orders_vegetables WHERE fk_orders = '$id'');
 		}
 		header('location: ' . dirname($_SERVER['SCRIPT_NAME']) . '/orderNr?id=' . $orderId);
+		exit;
     }
 
     
