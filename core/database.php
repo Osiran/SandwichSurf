@@ -1,43 +1,32 @@
 <?php
 
+// Kept for backwards compatibility; delegates to the env-aware db() in helpers.php
+// so there is a single place that owns the connection settings.
 function connectDatabase()
 {
-    try {
-        return new PDO('mysql:host=127.0.0.1;dbname=sandwichsurf', 'root', '');
-    } catch (PDOException $e) {
-        die('Keine Verbindung zur Datenbank möglich: ' . $e->getMessage());
-    }
+    return db();
 }
 
-function getAll($sql, $parms){
-
+function getAll($sql, $parms)
+{
     $conn = db();
     $statement = $conn->prepare($sql);
 
-    if(isset($parms)){
+    if (isset($parms)) {
         $statement->execute($parms);
-    }else{
+    } else {
         $statement->execute();
     }
-    
-    $res = $statement->fetchAll(PDO::FETCH_CLASS);
-    return $res;
+
+    // FETCH_OBJ returns stdClass rows so the views can use $row->column.
+    return $statement->fetchAll(PDO::FETCH_OBJ);
 }
 
-function saveData($sql, $parms){
-
+function saveData($sql, $parms)
+{
     $conn = db();
     $statement = $conn->prepare($sql);
-    
-    /*$size = count($parms);
-
-    for($i =0 ; $i< $size; $i++){
-        $statement->bindParam($i+1, $parms[$i]);
-    }*/
-    
     $statement->execute($parms);
 
     return $conn->lastInsertId();
-
-
 }

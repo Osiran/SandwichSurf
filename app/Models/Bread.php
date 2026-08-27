@@ -1,5 +1,5 @@
 <?php
-class Bread(){
+class Bread {
     private $pk_bread;
     private $label;
     private $img;

@@ -6,12 +6,15 @@ $routes = [
 	'home' => 'HomeController@index',
 	'login' => 'HomeController@login',
 	'loginControl' => 'HomeController@loginControl',
+	'logout' => 'HomeController@logout',
 
 	'orders' => 'OrderController@createGET',
 	'add_order' => 'OrderController@createPOST',
 	'orderNr' => 'OrderController@orderNr',
-	'overview' => 'OrderController@index', 
-	
+	'track' => 'OrderController@track',
+	'overview' => 'OrderController@index',
+	'updateStatus' => 'OrderController@updateStatus',
+
 	'ingredient' => 'IngredientController@index',
 ];
 
