@@ -1,116 +1,54 @@
--- Host: 127.0.0.1
--- Username: Root
--- Server: MariaDB
--- Password: ""
-
--- Use Database
+-- Seed data for the SandwichSurf ordering platform.
 USE `sandwichsurf`;
-INSERT INTO `vegetables`
-(`label`,`img`)
-values
-('Everything','public/img/icon.png'),
-('Ananas','public/img/icon.png'),
-('Banane','public/img/icon.png'),
-('Champignon','public/img/icon.png'),
-('Gurke','public/img/icon.png'),
-('Jalapeños','public/img/icon.png'),
-('Mais','public/img/icon.png'),
-('Pepperoni','public/img/icon.png'),
-('Salat','public/img/icon.png'),
-('Tomate','public/img/icon.png'),
-('Zwiebel','public/img/icon.png');
 
--- Host: 127.0.0.1
--- Username: Root
--- Server: MariaDB
--- Password: ""
+INSERT INTO `bread` (`label`,`img`,`price`) VALUES
+('Ciabatta','public/img/icon.png',2.00),
+('Glutenfrei','public/img/icon.png',2.50),
+('Vollkorn','public/img/icon.png',2.00),
+('Weissmehl','public/img/icon.png',1.50);
 
--- Use Database
-USE `sandwichsurf`;
-INSERT INTO `staff`
-(`password`,`userRole`)
-values
-('abc123','Admin'),
-('abc123','Staff');
--- Host: 127.0.0.1
--- Username: Root
--- Server: MariaDB
--- Password: ""
+INSERT INTO `cheese` (`label`,`img`,`price`) VALUES
+('Appenzeller','public/img/icon.png',1.50),
+('Cheddar','public/img/icon.png',1.20),
+('Emmentaler','public/img/icon.png',1.20),
+('Laktosefrei','public/img/icon.png',1.80);
 
--- Use Database
-USE `sandwichsurf`;
-INSERT INTO `sauce`
-(`label`,`img`)
-values
-('Cocktail','public/img/icon.png'),
-('Ketchup','public/img/icon.png'),
-('Mayonnaise','public/img/icon.png'),
-('Senf','public/img/icon.png');
+INSERT INTO `meat` (`label`,`img`,`price`) VALUES
+('Hühnchen','public/img/icon.png',3.00),
+('Roast-Beef','public/img/icon.png',3.50),
+('Schinken','public/img/icon.png',2.50),
+('Tofu','public/img/icon.png',2.80);
 
--- Host: 127.0.0.1
--- Username: Root
--- Server: MariaDB
--- Password: ""
+INSERT INTO `sauce` (`label`,`img`,`price`) VALUES
+('Cocktail','public/img/icon.png',0.50),
+('Ketchup','public/img/icon.png',0.30),
+('Mayonnaise','public/img/icon.png',0.30),
+('Senf','public/img/icon.png',0.30);
 
--- Use Database
-USE `sandwichsurf`;
-INSERT INTO `orders_vegetables`
-(`fk_orders`,`fk_vegetables`)
-values
-('1','1');
+INSERT INTO `vegetables` (`label`,`img`,`price`) VALUES
+('Everything','public/img/icon.png',2.00),
+('Ananas','public/img/icon.png',0.40),
+('Banane','public/img/icon.png',0.40),
+('Champignon','public/img/icon.png',0.40),
+('Gurke','public/img/icon.png',0.40),
+('Jalapeños','public/img/icon.png',0.40),
+('Mais','public/img/icon.png',0.40),
+('Pepperoni','public/img/icon.png',0.40),
+('Salat','public/img/icon.png',0.40),
+('Tomate','public/img/icon.png',0.40),
+('Zwiebel','public/img/icon.png',0.40);
 
--- Host: 127.0.0.1
--- Username: Root
--- Server: MariaDB
--- Password: ""
+-- Staff passwords are bcrypt hashes of 'abc123' (id 1 = Admin, id 2 = Staff).
+-- Legacy plaintext passwords are still accepted and auto-upgraded on next login.
+INSERT INTO `staff` (`password`,`userRole`) VALUES
+('$2y$10$VlmNGzSdBlL0KwxmXz4KneAcDmk/pIVI0KTa8r60yFnHWcRBDE05q','Admin'),
+('$2y$10$VlmNGzSdBlL0KwxmXz4KneAcDmk/pIVI0KTa8r60yFnHWcRBDE05q','Staff');
 
--- Use Database
-USE `sandwichsurf`;
-INSERT INTO `orders`
-(`fk_bread`,`fk_cheese`,`fk_meat`,`fk_sauce`,`fk_orders_vegetables`)
-values
-('1','1','1','1','1');
-
--- Host: 127.0.0.1
--- Username: Root
--- Server: MariaDB
--- Password: ""
-
--- Use Database
-USE `sandwichsurf`;
-INSERT INTO `meat`
-(`label`,`img`)
-values
-('Hühnchen','public/img/icon.png'),
-('Roast-Beef','public/img/icon.png'),
-('Schinken','public/img/icon.png'),
-('Tofu','public/img/icon.png');
-
--- Host: 127.0.0.1
--- Username: Root
--- Server: MariaDB
--- Password: ""
-
--- Use Database
-USE `sandwichsurf`;
-INSERT INTO `cheese`
-(`label`,`img`)
-values
-('Appenzeller','public/img/icon.png'),
-('Cheddar','public/img/icon.png'),
-('Emmentaler','public/img/icon.png'),
-('Laktosefrei','public/img/icon.png');
--- Host: 127.0.0.1
--- Username: Root
--- Server: MariaDB
--- Password: ""
-
--- Use Database
-USE `sandwichsurf`;
-INSERT INTO `bread`
-(`label`,`img`)
-values
-('Ciabatta','public/img/icon.png'),
-('Glutenfrei','public/img/icon.png'),
-('Vollkorn','public/img/icon.png'),
-('Weissmehl','public/img/icon.png');
+-- One sample order so the overview isn't empty: a Ciabatta / Emmentaler /
+-- Hühnchen / Ketchup sandwich (2.00+1.20+3.00+0.30 = 6.50) with Salat (+0.40).
+INSERT INTO `order_groups` (`customer_name`,`status`,`total_price`) VALUES
+('Max Muster','received',6.90);
+INSERT INTO `orders` (`fk_order_group`,`fk_bread`,`fk_cheese`,`fk_meat`,`fk_sauce`,`quantity`,`unit_price`) VALUES
+(1,1,3,1,2,1,6.90);
+INSERT INTO `orders_vegetables` (`fk_orders`,`fk_vegetables`) VALUES
+(1,9);
